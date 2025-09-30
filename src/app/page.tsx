@@ -64,7 +64,7 @@ export default function Home() {
             <div className="space-y-4">
               <p className="text-cyan-100/90 leading-relaxed">
                 Soy <span className="text-cyan-400 font-bold">JUAN PABLO LUCERO MORALES</span>, estudiante de Ingeniería
-                de Software en quinto semestre.
+                de Software en quinto.
               </p>
               <p className="text-cyan-100/90 leading-relaxed">
                 Me caracterizo por ser una persona comprometida, proactiva y apasionada por el aprendizaje continuo.
