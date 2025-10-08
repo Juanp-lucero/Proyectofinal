@@ -87,7 +87,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/abstract-technology-network-connections-data-visua-ewU2LSuN2w53JQR4edEPjhKMR0C8Bd.jpg"
+                  src="/software-developer-coding-on-laptop-with-neon-holo.jpg"
                   alt="Software Development"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -98,7 +98,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/software-developer-coding-on-laptop-with-neon-holo-CWVvVTfPwXyiqKRIH60KgaIkf8Q1cQ.jpg"
+                  src="/abstract-technology-network-connections-data-visua.jpg"
                   alt="Technology Network"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -179,6 +179,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-6">
                   MÁS ALLÁ DEL CÓDIGO
                 </h3>
+
                 <p className="text-cyan-100/90 leading-relaxed mb-4">
                   Fuera del mundo de la programación, mantengo un estilo de vida activo y saludable. Disfruto de:
                 </p>
@@ -244,6 +245,17 @@ export default function Home() {
                     </p>
                     <p className="text-cyan-400/70 text-sm mt-4">- Matt Mullenweg</p>
                   </div>
+                </div>
+              </div>
+
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                <div className="relative bg-black/40 border-2 border-pink-500/30 rounded-xl overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=300&fit=crop"
+                    alt="Deportes y vida activa"
+                    className="w-full h-64 object-cover"
+                  />
                 </div>
               </div>
             </div>
