@@ -104,6 +104,61 @@ export function Hero() {
 }`,
   }
 
+  const AnimatedWaves = () => (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Onda 1 - Cyan a Purple */}
+      <div className="absolute -bottom-32 left-0 right-0 h-96 opacity-20">
+        <svg className="absolute w-full h-full animate-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="url(#wave-gradient-1)"
+            d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+          <defs>
+            <linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#00fff7" />
+              <stop offset="50%" stopColor="#a020f0" />
+              <stop offset="100%" stopColor="#ff0080" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      {/* Onda 2 - Pink a Purple */}
+      <div className="absolute -bottom-24 left-0 right-0 h-96 opacity-15">
+        <svg className="absolute w-full h-full animate-wave-slow" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="url(#wave-gradient-2)"
+            d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+          <defs>
+            <linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#ff0080" />
+              <stop offset="50%" stopColor="#a020f0" />
+              <stop offset="100%" stopColor="#00fff7" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      {/* Onda 3 - Purple a Cyan (nueva) */}
+      <div className="absolute -bottom-16 left-0 right-0 h-96 opacity-10">
+        <svg className="absolute w-full h-full animate-wave-reverse" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="url(#wave-gradient-3)"
+            d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,234.7C672,245,768,235,864,213.3C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+          <defs>
+            <linearGradient id="wave-gradient-3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#a020f0" />
+              <stop offset="50%" stopColor="#00fff7" />
+              <stop offset="100%" stopColor="#ff0080" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  )
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -123,38 +178,7 @@ export function Hero() {
           }}
         />
 
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -bottom-32 left-0 right-0 h-96 opacity-20">
-            <svg className="absolute w-full h-full animate-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
-              <path
-                fill="url(#wave-gradient-1)"
-                d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-              ></path>
-              <defs>
-                <linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#00fff7" />
-                  <stop offset="50%" stopColor="#a020f0" />
-                  <stop offset="100%" stopColor="#ff0080" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div className="absolute -bottom-24 left-0 right-0 h-96 opacity-15">
-            <svg className="absolute w-full h-full animate-wave-slow" viewBox="0 0 1440 320" preserveAspectRatio="none">
-              <path
-                fill="url(#wave-gradient-2)"
-                d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-              ></path>
-              <defs>
-                <linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#ff0080" />
-                  <stop offset="50%" stopColor="#a020f0" />
-                  <stop offset="100%" stopColor="#00fff7" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-        </div>
+        <AnimatedWaves />
 
         {/* Contenido principal */}
         <div className="relative z-10 max-w-6xl mx-auto text-center">
@@ -192,7 +216,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/abstract-technology-network-connections-data-visua-ewU2LSuN2w53JQR4edEPjhKMR0C8Bd.jpg"
+                  src="/software-developer-coding-on-laptop-with-neon-holo.jpg"
                   alt="Software Development"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -203,7 +227,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/software-developer-coding-on-laptop-with-neon-holo-CWVvVTfPwXyiqKRIH60KgaIkf8Q1cQ.jpg"
+                  src="/abstract-technology-network-connections-data-visua.jpg"
                   alt="Technology Network"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -227,6 +251,8 @@ export function Hero() {
             backgroundSize: "50px 50px",
           }}
         />
+
+        <AnimatedWaves />
 
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-5xl md:text-7xl font-black mb-16 text-center">
@@ -382,6 +408,8 @@ export function Hero() {
             backgroundSize: "50px 50px",
           }}
         />
+
+        <AnimatedWaves />
 
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-5xl md:text-7xl font-black mb-16 text-center">
@@ -600,7 +628,7 @@ export function Hero() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg"
+                    src="https://images.unsplash.com/photo-1484480974693-afdab827c52f?w=600&h=400&fit=crop"
                     alt="Sistema de Gestión de Tareas"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -700,8 +728,11 @@ export function Hero() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-cyan-500/30">
-        <div className="max-w-6xl mx-auto text-center">
+      <footer className="py-8 px-6 border-t border-cyan-500/30 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <AnimatedWaves />
+        </div>
+        <div className="max-w-6xl mx-auto text-center relative z-10">
           <p className="text-cyan-100/70">© 2025 Juan Pablo Lucero Morales. Todos los derechos reservados.</p>
         </div>
       </footer>
