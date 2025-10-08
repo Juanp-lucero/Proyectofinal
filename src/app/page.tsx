@@ -1,4 +1,109 @@
+"use client"
+
+import { useState } from "react"
+
 export default function Home() {
+  const [showCode, setShowCode] = useState<number | null>(null)
+
+  const projectsCode = {
+    1: `// Sistema de Base de Datos de Estudiantes
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  database: 'estudiantes_db'
+});
+
+// Consulta de estudiantes
+app.get('/estudiantes', (req, res) => {
+  const query = 'SELECT * FROM estudiantes';
+  connection.query(query, (err, results) => {
+    if (err) throw err;
+    res.json(results);
+  });
+});`,
+    2: `// Juego de Memoria Cognitivo
+class MemoryGame {
+  constructor() {
+    this.cards = [];
+    this.flippedCards = [];
+    this.score = 0;
+  }
+  
+  flipCard(cardId) {
+    const card = this.cards[cardId];
+    card.flipped = true;
+    this.flippedCards.push(card);
+    
+    if (this.flippedCards.length === 2) {
+      this.checkMatch();
+    }
+  }
+}`,
+    3: `// Card Component con Tailwind
+export function Card({ title, description }) {
+  return (
+    <div className="bg-white rounded-xl shadow-lg 
+                    hover:shadow-2xl transition-all 
+                    duration-300 p-6 border-2 
+                    border-transparent hover:border-blue-500">
+      <h3 className="text-2xl font-bold mb-4">
+        {title}
+      </h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}`,
+    4: `/* Maquetación CSS Grid Avanzada */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+}`,
+    5: `// Task Manager - Next.js API Route
+export async function POST(request: Request) {
+  const { title, priority, category } = await request.json();
+  
+  const task = await prisma.task.create({
+    data: {
+      title,
+      priority,
+      category,
+      userId: session.user.id,
+      completed: false
+    }
+  });
+  
+  return Response.json(task);
+}`,
+    6: `// Landing Page con Framer Motion
+import { motion } from 'framer-motion';
+
+export function Hero() {
+  return (
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="min-h-screen flex items-center">
+      <h1 className="text-6xl font-bold">
+        Bienvenido
+      </h1>
+    </motion.section>
+  );
+}`,
+  }
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -87,7 +192,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/abstract-technology-network-connections-data-visua-ewU2LSuN2w53JQR4edEPjhKMR0C8Bd.jpg"
+                  src="/software-developer-coding-on-laptop-with-neon-holo.jpg"
                   alt="Software Development"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -98,7 +203,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/software-developer-coding-on-laptop-with-neon-holo-CWVvVTfPwXyiqKRIH60KgaIkf8Q1cQ.jpg"
+                  src="/abstract-technology-network-connections-data-visua.jpg"
                   alt="Technology Network"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -316,14 +421,22 @@ export default function Home() {
                       Bootstrap
                     </span>
                   </div>
-                  <div className="flex gap-3">
-                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
-                      Ver Demo
-                    </button>
-                    <button className="px-4 py-2 bg-black/40 text-cyan-400 border border-cyan-500/50 font-bold rounded-lg text-sm hover:bg-cyan-500/20 transition-all">
-                      Código
-                    </button>
-                  </div>
+
+                  <button
+                    onClick={() => setShowCode(showCode === 1 ? null : 1)}
+                    className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
+                  >
+                    <span className="text-lg">{"</>"}</span>
+                    {showCode === 1 ? "Ocultar Código" : "Ver Código"}
+                  </button>
+
+                  {showCode === 1 && (
+                    <div className="mt-4 bg-black/80 border border-cyan-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
+                      <pre className="text-cyan-400 text-xs">
+                        <code>{projectsCode[1]}</code>
+                      </pre>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -359,14 +472,22 @@ export default function Home() {
                       CSS3
                     </span>
                   </div>
-                  <div className="flex gap-3">
-                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
-                      Ver Demo
-                    </button>
-                    <button className="px-4 py-2 bg-black/40 text-purple-400 border border-purple-500/50 font-bold rounded-lg text-sm hover:bg-purple-500/20 transition-all">
-                      Código
-                    </button>
-                  </div>
+
+                  <button
+                    onClick={() => setShowCode(showCode === 2 ? null : 2)}
+                    className="w-full px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
+                  >
+                    <span className="text-lg">{"</>"}</span>
+                    {showCode === 2 ? "Ocultar Código" : "Ver Código"}
+                  </button>
+
+                  {showCode === 2 && (
+                    <div className="mt-4 bg-black/80 border border-purple-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
+                      <pre className="text-purple-400 text-xs">
+                        <code>{projectsCode[2]}</code>
+                      </pre>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -402,14 +523,22 @@ export default function Home() {
                       TypeScript
                     </span>
                   </div>
-                  <div className="flex gap-3">
-                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-pink-500 to-cyan-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
-                      Ver Demo
-                    </button>
-                    <button className="px-4 py-2 bg-black/40 text-pink-400 border border-pink-500/50 font-bold rounded-lg text-sm hover:bg-pink-500/20 transition-all">
-                      Código
-                    </button>
-                  </div>
+
+                  <button
+                    onClick={() => setShowCode(showCode === 3 ? null : 3)}
+                    className="w-full px-4 py-3 bg-gradient-to-r from-pink-500 to-cyan-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
+                  >
+                    <span className="text-lg">{"</>"}</span>
+                    {showCode === 3 ? "Ocultar Código" : "Ver Código"}
+                  </button>
+
+                  {showCode === 3 && (
+                    <div className="mt-4 bg-black/80 border border-pink-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
+                      <pre className="text-pink-400 text-xs">
+                        <code>{projectsCode[3]}</code>
+                      </pre>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -445,14 +574,22 @@ export default function Home() {
                       Responsive
                     </span>
                   </div>
-                  <div className="flex gap-3">
-                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-pink-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
-                      Ver Demo
-                    </button>
-                    <button className="px-4 py-2 bg-black/40 text-cyan-400 border border-cyan-500/50 font-bold rounded-lg text-sm hover:bg-cyan-500/20 transition-all">
-                      Código
-                    </button>
-                  </div>
+
+                  <button
+                    onClick={() => setShowCode(showCode === 4 ? null : 4)}
+                    className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-pink-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
+                  >
+                    <span className="text-lg">{"</>"}</span>
+                    {showCode === 4 ? "Ocultar Código" : "Ver Código"}
+                  </button>
+
+                  {showCode === 4 && (
+                    <div className="mt-4 bg-black/80 border border-cyan-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
+                      <pre className="text-cyan-400 text-xs">
+                        <code>{projectsCode[4]}</code>
+                      </pre>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -463,7 +600,7 @@ export default function Home() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg"
+                    src="https://images.unsplash.com/photo-1484480974693-afdab827c52f?w=600&h=400&fit=crop"
                     alt="Sistema de Gestión de Tareas"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -488,14 +625,22 @@ export default function Home() {
                       TypeScript
                     </span>
                   </div>
-                  <div className="flex gap-3">
-                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
-                      Ver Demo
-                    </button>
-                    <button className="px-4 py-2 bg-black/40 text-purple-400 border border-purple-500/50 font-bold rounded-lg text-sm hover:bg-purple-500/20 transition-all">
-                      Código
-                    </button>
-                  </div>
+
+                  <button
+                    onClick={() => setShowCode(showCode === 5 ? null : 5)}
+                    className="w-full px-4 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
+                  >
+                    <span className="text-lg">{"</>"}</span>
+                    {showCode === 5 ? "Ocultar Código" : "Ver Código"}
+                  </button>
+
+                  {showCode === 5 && (
+                    <div className="mt-4 bg-black/80 border border-purple-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
+                      <pre className="text-purple-400 text-xs">
+                        <code>{projectsCode[5]}</code>
+                      </pre>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -531,14 +676,22 @@ export default function Home() {
                       Framer Motion
                     </span>
                   </div>
-                  <div className="flex gap-3">
-                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
-                      Ver Demo
-                    </button>
-                    <button className="px-4 py-2 bg-black/40 text-pink-400 border border-pink-500/50 font-bold rounded-lg text-sm hover:bg-pink-500/20 transition-all">
-                      Código
-                    </button>
-                  </div>
+
+                  <button
+                    onClick={() => setShowCode(showCode === 6 ? null : 6)}
+                    className="w-full px-4 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
+                  >
+                    <span className="text-lg">{"</>"}</span>
+                    {showCode === 6 ? "Ocultar Código" : "Ver Código"}
+                  </button>
+
+                  {showCode === 6 && (
+                    <div className="mt-4 bg-black/80 border border-pink-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
+                      <pre className="text-pink-400 text-xs">
+                        <code>{projectsCode[6]}</code>
+                      </pre>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
