@@ -87,7 +87,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/abstract-technology-network-connections-data-visua-FkvgRbCKcVaqHMaXhrO64mTh0BTiHW.jpg"
+                  src="/software-developer-coding-on-laptop-with-neon-holo.jpg"
                   alt="Software Development"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -98,7 +98,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/software-developer-coding-on-laptop-with-neon-holo-xkBZ5tJCC8HTb6BO4kYci7551det1x.jpg"
+                  src="/abstract-technology-network-connections-data-visua.jpg"
                   alt="Technology Network"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -109,32 +109,142 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="sobre-mi" className="py-20 px-6 relative">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black mb-8">
-            <span className="text-cyan-400">SOBRE </span>
-            <span className="text-pink-500">MÍ</span>
+      <section id="sobre-mi" className="py-32 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/50 to-black"></div>
+
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `
+              linear-gradient(cyan 1px, transparent 1px),
+              linear-gradient(90deg, cyan 1px, transparent 1px)
+            `,
+            backgroundSize: "50px 50px",
+          }}
+        />
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <h2 className="text-5xl md:text-7xl font-black mb-16 text-center">
+            <span className="text-cyan-400 neon-glow">SOBRE </span>
+            <span className="text-pink-500 neon-glow">MÍ</span>
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <p className="text-cyan-100/90 leading-relaxed">
-                Soy <span className="text-cyan-400 font-bold">JUAN PABLO LUCERO MORALES</span>, estudiante de Ingeniería
-                de Software en quinto.
-              </p>
-              <p className="text-cyan-100/90 leading-relaxed">
-                Me caracterizo por ser una persona comprometida, proactiva y apasionada por el aprendizaje continuo.
-              </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-8">
+              {/* Descripción principal */}
+              <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/50 transition-all">
+                <p className="text-lg text-cyan-100/90 leading-relaxed mb-4">
+                  Soy{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 font-bold">
+                    JUAN PABLO LUCERO MORALES
+                  </span>
+                  , estudiante de Ingeniería de Software en quinto semestre.
+                </p>
+                <p className="text-lg text-cyan-100/90 leading-relaxed mb-4">
+                  Me caracterizo por ser una persona <span className="text-cyan-400 font-bold">COMPROMETIDA</span>,{" "}
+                  <span className="text-purple-400 font-bold">PROACTIVA</span> y apasionada por el aprendizaje continuo.
+                </p>
+                <p className="text-lg text-cyan-100/90 leading-relaxed mb-4">
+                  A lo largo de mi formación he demostrado constancia y dedicación en cada proyecto académico, aplicando
+                  mis conocimientos tanto en el <span className="text-cyan-400 font-bold">DESARROLLO TÉCNICO</span> como
+                  en la solución creativa de problemas.
+                </p>
+                <p className="text-lg text-cyan-100/90 leading-relaxed">
+                  Mi enfoque está en crecer como{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-bold">
+                    PROFESIONAL INTEGRAL
+                  </span>
+                  , combinando la lógica de la programación con el trabajo en equipo, la innovación y la{" "}
+                  <span className="text-pink-400 font-bold">MEJORA CONSTANTE</span>.
+                </p>
+              </div>
+
+              <div className="bg-black/40 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all">
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-4">
+                  FORMACIÓN ADICIONAL
+                </h3>
+                <div className="flex items-start gap-3">
+                  <div className="text-3xl">📊</div>
+                  <div>
+                    <p className="text-cyan-100/90 leading-relaxed">
+                      He completado un curso de <span className="text-purple-400 font-bold">ANÁLISIS DE DATOS</span>,
+                      ampliando mis habilidades en la interpretación y visualización de información para la toma de
+                      decisiones estratégicas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-black/40 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl p-8 hover:border-pink-500/50 transition-all">
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-6">
+                  MÁS ALLÁ DEL CÓDIGO
+                </h3>
+                <p className="text-cyan-100/90 leading-relaxed mb-4">
+                  Fuera del mundo de la programación, mantengo un estilo de vida activo y saludable. Disfruto de:
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex items-center gap-3 bg-black/40 border border-cyan-500/20 rounded-lg p-3">
+                    <span className="text-2xl">🚴</span>
+                    <span className="text-cyan-400 font-semibold">Ciclismo</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-black/40 border border-purple-500/20 rounded-lg p-3">
+                    <span className="text-2xl">🏃</span>
+                    <span className="text-purple-400 font-semibold">Running</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-black/40 border border-pink-500/20 rounded-lg p-3">
+                    <span className="text-2xl">⚽</span>
+                    <span className="text-pink-400 font-semibold">Deportes</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-black/40 border border-cyan-500/20 rounded-lg p-3">
+                    <span className="text-2xl">💪</span>
+                    <span className="text-cyan-400 font-semibold">Fitness</span>
+                  </div>
+                </div>
+                <p className="text-cyan-100/70 text-sm mt-4 leading-relaxed">
+                  Estas actividades me ayudan a mantener el equilibrio, la disciplina y la energía necesaria para
+                  enfrentar nuevos desafíos tanto personales como profesionales.
+                </p>
+              </div>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold text-pink-400 mb-4">TECH STACK</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {["HTML/CSS/JS", "TypeScript", "React", "Next.js", "MySQL", "MongoDB"].map((skill) => (
-                  <div key={skill} className="bg-black/40 border border-cyan-500/30 rounded-lg p-3 text-center">
-                    <span className="text-cyan-400 font-bold text-sm">{skill}</span>
+            <div className="space-y-8">
+              <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/50 transition-all">
+                <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 mb-8 text-center">
+                  TECH STACK
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { name: "HTML/CSS/JS", color: "cyan" },
+                    { name: "TypeScript", color: "purple" },
+                    { name: "React", color: "pink" },
+                    { name: "Next.js", color: "cyan" },
+                    { name: "MySQL", color: "purple" },
+                    { name: "MongoDB", color: "pink" },
+                  ].map((skill) => (
+                    <div
+                      key={skill.name}
+                      className={`relative group bg-black/60 border-2 border-${skill.color}-500/30 rounded-xl p-4 text-center hover:border-${skill.color}-500/70 transition-all hover:scale-105`}
+                    >
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-r from-${skill.color}-500/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity`}
+                      ></div>
+                      <span className={`relative text-${skill.color}-400 font-bold text-sm`}>{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8">
+                  <div className="text-center">
+                    <div className="text-6xl mb-4">💡</div>
+                    <p className="text-xl text-cyan-100/90 leading-relaxed italic">
+                      "La tecnología es mejor cuando acerca a las personas"
+                    </p>
+                    <p className="text-cyan-400/70 text-sm mt-4">- Matt Mullenweg</p>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
