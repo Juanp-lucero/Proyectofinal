@@ -87,7 +87,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="/software-developer-coding-on-laptop-with-neon-holo.jpg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/abstract-technology-network-connections-data-visua-ewU2LSuN2w53JQR4edEPjhKMR0C8Bd.jpg"
                   alt="Software Development"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -463,7 +463,7 @@ export default function Home() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1484480974693-afdab827c52f?w=600&h=400&fit=crop"
+                    src="https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg"
                     alt="Sistema de Gestión de Tareas"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
