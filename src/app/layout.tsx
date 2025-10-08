@@ -11,8 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Juan Pablo Lucero Morales | Portafolio",
-  description:
-    "Portafolio de Juan Pablo Lucero Morales - Estudiante de Ingeniería de Software",
+  description: "Portafolio de Juan Pablo Lucero Morales - Estudiante de Ingeniería de Software",
 }
 
 export default function RootLayout({
@@ -36,50 +35,28 @@ export default function RootLayout({
             {/* Links de navegación */}
             <div className="flex gap-8 text-lg font-semibold">
               <Link href="/" className="relative group transition-colors">
-                <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">
-                  INICIO
-                </span>
+                <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">INICIO</span>
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
 
-              <Link
-                href="#sobre-mi"
-                className="relative group transition-colors"
-              >
-                <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">
-                  SOBRE MÍ
-                </span>
+              <Link href="#sobre-mi" className="relative group transition-colors">
+                <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">SOBRE MÍ</span>
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
 
-              <Link
-                href="#proyectos"
-                className="relative group transition-colors"
-              >
-                <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">
-                  PROYECTOS
-                </span>
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-
-              <Link
-                href="#contacto"
-                className="relative group transition-colors"
-              >
-                <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">
-                  CONTACTO
-                </span>
+              <Link href="#proyectos" className="relative group transition-colors">
+                <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">PROYECTOS</span>
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
 
               {/* 🔹 Nuevo link de Testimonios */}
-              <Link
-                href="#testimonios"
-                className="relative group transition-colors"
-              >
-                <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">
-                  TESTIMONIOS
-                </span>
+              <Link href="#testimonios" className="relative group transition-colors">
+                <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">TESTIMONIOS</span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+
+              <Link href="#contacto" className="relative group transition-colors">
+                <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">CONTACTO</span>
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </div>
