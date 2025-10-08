@@ -87,7 +87,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/software-developer-coding-on-laptop-with-neon-holo-CWVvVTfPwXyiqKRIH60KgaIkf8Q1cQ.jpg"
+                  src="/software-developer-coding-on-laptop-with-neon-holo.jpg"
                   alt="Software Development"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -98,7 +98,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden p-2">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/abstract-technology-network-connections-data-visua-ewU2LSuN2w53JQR4edEPjhKMR0C8Bd.jpg"
+                  src="/abstract-technology-network-connections-data-visua.jpg"
                   alt="Technology Network"
                   className="w-full h-64 object-cover rounded-xl"
                 />
@@ -180,7 +180,7 @@ export default function Home() {
                   MÁS ALLÁ DEL CÓDIGO
                 </h3>
 
-                <p className="text-cyan-100/90 leading-relaxed mb-4">
+                <p className="text-cyan-100/80 leading-relaxed mb-4">
                   Fuera del mundo de la programación, mantengo un estilo de vida activo y saludable. Disfruto de:
                 </p>
                 <div className="grid grid-cols-2 gap-4">
@@ -256,6 +256,289 @@ export default function Home() {
                     alt="Deportes y vida activa"
                     className="w-full h-64 object-cover"
                   />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="proyectos" className="py-32 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/30 to-black"></div>
+
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `
+              linear-gradient(cyan 1px, transparent 1px),
+              linear-gradient(90deg, cyan 1px, transparent 1px)
+            `,
+            backgroundSize: "50px 50px",
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <h2 className="text-5xl md:text-7xl font-black mb-16 text-center">
+            <span className="text-cyan-400 neon-glow">MIS </span>
+            <span className="text-pink-500 neon-glow">PROYECTOS</span>
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Proyecto 1: Base de Datos de Estudiantes */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=400&fit=crop"
+                    alt="Base de Datos de Estudiantes"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-3">
+                    Base de Datos de Estudiantes
+                  </h3>
+                  <p className="text-cyan-100/80 text-sm mb-4 leading-relaxed">
+                    Sistema completo de gestión académica con MySQL. Permite registrar, consultar y administrar
+                    información de estudiantes, cursos y calificaciones con interfaz intuitiva.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-xs">
+                      MySQL
+                    </span>
+                    <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-400 text-xs">
+                      PHP
+                    </span>
+                    <span className="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded-full text-pink-400 text-xs">
+                      Bootstrap
+                    </span>
+                  </div>
+                  <div className="flex gap-3">
+                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
+                      Ver Demo
+                    </button>
+                    <button className="px-4 py-2 bg-black/40 text-cyan-400 border border-cyan-500/50 font-bold rounded-lg text-sm hover:bg-cyan-500/20 transition-all">
+                      Código
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Proyecto 2: Juegos Cognitivos */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop"
+                    alt="Juegos Cognitivos"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-3">
+                    Juegos Cognitivos
+                  </h3>
+                  <p className="text-cyan-100/80 text-sm mb-4 leading-relaxed">
+                    Colección interactiva de juegos diseñados para estimular habilidades cognitivas como memoria,
+                    atención y lógica. Incluye sistema de puntuación y niveles progresivos.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-400 text-xs">
+                      JavaScript
+                    </span>
+                    <span className="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded-full text-pink-400 text-xs">
+                      HTML5 Canvas
+                    </span>
+                    <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-xs">
+                      CSS3
+                    </span>
+                  </div>
+                  <div className="flex gap-3">
+                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
+                      Ver Demo
+                    </button>
+                    <button className="px-4 py-2 bg-black/40 text-purple-400 border border-purple-500/50 font-bold rounded-lg text-sm hover:bg-purple-500/20 transition-all">
+                      Código
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Proyecto 3: Card Tailwind */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&h=400&fit=crop"
+                    alt="Card Tailwind"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-cyan-500 mb-3">
+                    Card Components Tailwind
+                  </h3>
+                  <p className="text-cyan-100/80 text-sm mb-4 leading-relaxed">
+                    Biblioteca de componentes de tarjetas reutilizables construidas con Tailwind CSS. Incluye variantes,
+                    animaciones y diseños responsivos listos para producción.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded-full text-pink-400 text-xs">
+                      Tailwind CSS
+                    </span>
+                    <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-xs">
+                      React
+                    </span>
+                    <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-400 text-xs">
+                      TypeScript
+                    </span>
+                  </div>
+                  <div className="flex gap-3">
+                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-pink-500 to-cyan-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
+                      Ver Demo
+                    </button>
+                    <button className="px-4 py-2 bg-black/40 text-pink-400 border border-pink-500/50 font-bold rounded-lg text-sm hover:bg-pink-500/20 transition-all">
+                      Código
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Proyecto 4: Maquetación CSS */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop"
+                    alt="Maquetación CSS"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 mb-3">
+                    Maquetación CSS Avanzada
+                  </h3>
+                  <p className="text-cyan-100/80 text-sm mb-4 leading-relaxed">
+                    Proyecto de layouts complejos usando CSS Grid y Flexbox. Incluye diseños responsivos, animaciones
+                    CSS puras y técnicas modernas de maquetación web.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-xs">
+                      CSS3
+                    </span>
+                    <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-400 text-xs">
+                      HTML5
+                    </span>
+                    <span className="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded-full text-pink-400 text-xs">
+                      Responsive
+                    </span>
+                  </div>
+                  <div className="flex gap-3">
+                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-pink-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
+                      Ver Demo
+                    </button>
+                    <button className="px-4 py-2 bg-black/40 text-cyan-400 border border-cyan-500/50 font-bold rounded-lg text-sm hover:bg-cyan-500/20 transition-all">
+                      Código
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Proyecto 5: Sistema de Gestión de Tareas */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1484480974693-afdab827c52f?w=600&h=400&fit=crop"
+                    alt="Sistema de Gestión de Tareas"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-500 mb-3">
+                    Task Manager App
+                  </h3>
+                  <p className="text-cyan-100/80 text-sm mb-4 leading-relaxed">
+                    Aplicación full-stack para gestión de tareas con autenticación, categorías, prioridades y
+                    notificaciones. Incluye dashboard con estadísticas y filtros avanzados.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-400 text-xs">
+                      Next.js
+                    </span>
+                    <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-xs">
+                      MongoDB
+                    </span>
+                    <span className="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded-full text-pink-400 text-xs">
+                      TypeScript
+                    </span>
+                  </div>
+                  <div className="flex gap-3">
+                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
+                      Ver Demo
+                    </button>
+                    <button className="px-4 py-2 bg-black/40 text-purple-400 border border-purple-500/50 font-bold rounded-lg text-sm hover:bg-purple-500/20 transition-all">
+                      Código
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Proyecto 6: Landing Page Responsive */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+                    alt="Landing Page Responsive"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500 mb-3">
+                    Landing Page Moderna
+                  </h3>
+                  <p className="text-cyan-100/80 text-sm mb-4 leading-relaxed">
+                    Template de landing page completamente responsive con animaciones, formularios de contacto y
+                    optimización SEO. Diseño moderno y adaptable a cualquier negocio.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded-full text-pink-400 text-xs">
+                      React
+                    </span>
+                    <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-400 text-xs">
+                      Tailwind
+                    </span>
+                    <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-xs">
+                      Framer Motion
+                    </span>
+                  </div>
+                  <div className="flex gap-3">
+                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform">
+                      Ver Demo
+                    </button>
+                    <button className="px-4 py-2 bg-black/40 text-pink-400 border border-pink-500/50 font-bold rounded-lg text-sm hover:bg-pink-500/20 transition-all">
+                      Código
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
