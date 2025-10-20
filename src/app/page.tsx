@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Hero } from "@/components/hero"
+import { Testimonials } from "@/components/testimonials"
 
 export default function Home() {
   const [showCode, setShowCode] = useState<number | null>(null)
@@ -555,7 +556,7 @@ export function Hero() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg"
+                    src="https://images.unsplash.com/photo-1484480974693-afdab827c52f?w=600&h=400&fit=crop"
                     alt="Sistema de Gestión de Tareas"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -653,6 +654,9 @@ export function Hero() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-cyan-500/30 relative overflow-hidden">
