@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { Hero } from "@/components/hero"
 
 export default function Home() {
   const [showCode, setShowCode] = useState<number | null>(null)
@@ -161,81 +162,7 @@ export function Hero() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-        {/* Background con gradiente */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/70 to-black"></div>
-
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-              linear-gradient(cyan 1px, transparent 1px),
-              linear-gradient(90deg, cyan 1px, transparent 1px)
-            `,
-            backgroundSize: "50px 50px",
-          }}
-        />
-
-        <AnimatedWaves />
-
-        {/* Contenido principal */}
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-lg">
-              SOFTWARE ENGINEER
-            </span>
-          </div>
-
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-wider">
-            <span className="text-white">JUAN PABLO</span>
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
-              LUCERO MORALES
-            </span>
-          </h1>
-
-          <p className="text-xl text-cyan-100/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Estudiante de <span className="text-cyan-400 font-bold">INGENIERÍA DE SOFTWARE</span> en quinto semestre.
-            Comprometido, proactivo y apasionado por el{" "}
-            <span className="text-purple-400 font-bold">APRENDIZAJE CONTINUO</span>.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-xl hover:scale-105 transition-transform">
-              VER PROYECTOS
-            </button>
-            <button className="px-8 py-4 bg-black/40 text-cyan-400 border-2 border-cyan-500/50 font-bold rounded-xl hover:bg-cyan-500/20 transition-all">
-              CONTACTAR
-            </button>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-16">
-            <div className="relative group animate-float">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
-              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden p-2">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/software-developer-coding-on-laptop-with-neon-holo-CWVvVTfPwXyiqKRIH60KgaIkf8Q1cQ.jpg"
-                  alt="Software Development"
-                  className="w-full h-64 object-cover rounded-xl"
-                />
-              </div>
-            </div>
-
-            <div className="relative group animate-float" style={{ animationDelay: "1s" }}>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
-              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden p-2">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/abstract-technology-network-connections-data-visua-ewU2LSuN2w53JQR4edEPjhKMR0C8Bd.jpg"
-                  alt="Technology Network"
-                  className="w-full h-64 object-cover rounded-xl"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* About Section */}
       <section id="sobre-mi" className="py-32 px-6 relative overflow-hidden">
@@ -307,7 +234,7 @@ export function Hero() {
               </div>
 
               <div className="bg-black/40 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl p-8 hover:border-pink-500/50 transition-all">
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-6">
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-6">
                   MÁS ALLÁ DEL CÓDIGO
                 </h3>
 
@@ -628,7 +555,7 @@ export function Hero() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg"
+                    src="https://images.unsplash.com/photo-1484480974693-afdab827c52f?w=600&h=400&fit=crop"
                     alt="Sistema de Gestión de Tareas"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
