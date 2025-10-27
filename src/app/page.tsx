@@ -688,7 +688,7 @@ export function Hero() {
                 <div className="text-3xl">📧</div>
                 <div className="text-left">
                   <p className="text-cyan-400 font-semibold">Email</p>
-                  <p className="text-cyan-100/70 text-sm">juanpablo@example.com</p>
+                  <p className="text-cyan-100/70 text-sm">juanp.lucero.2006@gmail.com</p>
                 </div>
               </div>
 
@@ -704,7 +704,7 @@ export function Hero() {
                 <div className="text-3xl">🐙</div>
                 <div className="text-left">
                   <p className="text-pink-400 font-semibold">GitHub</p>
-                  <p className="text-cyan-100/70 text-sm">@jplucero</p>
+                  <p className="text-cyan-100/70 text-sm">Juanp-lucero</p>
                 </div>
               </div>
 
@@ -712,7 +712,7 @@ export function Hero() {
                 <div className="text-3xl">📱</div>
                 <div className="text-left">
                   <p className="text-cyan-400 font-semibold">Teléfono</p>
-                  <p className="text-cyan-100/70 text-sm">+57 123 456 7890</p>
+                  <p className="text-cyan-100/70 text-sm">+57 315819139</p>
                 </div>
               </div>
             </div>
