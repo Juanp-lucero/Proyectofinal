@@ -3,6 +3,59 @@
 import { useState } from "react"
 import { Hero } from "@/components/hero"
 import { Testimonials } from "@/components/testimonials"
+import { Experience } from "@/components/experience"
+
+const AnimatedWaves = () => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute -bottom-32 left-0 right-0 h-96 opacity-20">
+      <svg className="absolute w-full h-full animate-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path
+          fill="url(#wave-gradient-1)"
+          d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+        <defs>
+          <linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#00fff7" />
+            <stop offset="50%" stopColor="#a020f0" />
+            <stop offset="100%" stopColor="#ff0080" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <div className="absolute -bottom-24 left-0 right-0 h-96 opacity-15">
+      <svg className="absolute w-full h-full animate-wave-slow" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path
+          fill="url(#wave-gradient-2)"
+          d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+        <defs>
+          <linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#ff0080" />
+            <stop offset="50%" stopColor="#a020f0" />
+            <stop offset="100%" stopColor="#00fff7" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <div className="absolute -bottom-16 left-0 right-0 h-96 opacity-10">
+      <svg className="absolute w-full h-full animate-wave-reverse" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path
+          fill="url(#wave-gradient-3)"
+          d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,234.7C672,245,768,235,864,213.3C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+        <defs>
+          <linearGradient id="wave-gradient-3" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#a020f0" />
+            <stop offset="50%" stopColor="#00fff7" />
+            <stop offset="100%" stopColor="#ff0080" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+)
 
 export default function Home() {
   const [showCode, setShowCode] = useState<number | null>(null)
@@ -105,61 +158,6 @@ export function Hero() {
   );
 }`,
   }
-
-  const AnimatedWaves = () => (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Onda 1 - Cyan a Purple */}
-      <div className="absolute -bottom-32 left-0 right-0 h-96 opacity-20">
-        <svg className="absolute w-full h-full animate-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path
-            fill="url(#wave-gradient-1)"
-            d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-          <defs>
-            <linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#00fff7" />
-              <stop offset="50%" stopColor="#a020f0" />
-              <stop offset="100%" stopColor="#ff0080" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
-      {/* Onda 2 - Pink a Purple */}
-      <div className="absolute -bottom-24 left-0 right-0 h-96 opacity-15">
-        <svg className="absolute w-full h-full animate-wave-slow" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path
-            fill="url(#wave-gradient-2)"
-            d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-          <defs>
-            <linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#ff0080" />
-              <stop offset="50%" stopColor="#a020f0" />
-              <stop offset="100%" stopColor="#00fff7" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
-      {/* Onda 3 - Purple a Cyan (nueva) */}
-      <div className="absolute -bottom-16 left-0 right-0 h-96 opacity-10">
-        <svg className="absolute w-full h-full animate-wave-reverse" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path
-            fill="url(#wave-gradient-3)"
-            d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,234.7C672,245,768,235,864,213.3C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-          <defs>
-            <linearGradient id="wave-gradient-3" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#a020f0" />
-              <stop offset="50%" stopColor="#00fff7" />
-              <stop offset="100%" stopColor="#ff0080" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-    </div>
-  )
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -657,6 +655,74 @@ export function Hero() {
 
       {/* Testimonials Section */}
       <Testimonials />
+
+      {/* Experience Section */}
+      <Experience />
+
+      {/* Contact Section */}
+      <section id="contacto" className="py-32 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/40 to-black"></div>
+
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `
+              linear-gradient(cyan 1px, transparent 1px),
+              linear-gradient(90deg, cyan 1px, transparent 1px)
+            `,
+            backgroundSize: "50px 50px",
+          }}
+        />
+
+        <div className="max-w-4xl mx-auto relative z-10 text-center">
+          <h2 className="text-5xl md:text-7xl font-black mb-6">
+            <span className="text-cyan-400 neon-glow">CONTAC</span>
+            <span className="text-pink-500 neon-glow">TO</span>
+          </h2>
+
+          <p className="text-cyan-100/70 text-lg mb-12">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+
+          <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="flex items-center gap-4 p-4 bg-black/40 border border-cyan-500/20 rounded-xl">
+                <div className="text-3xl">📧</div>
+                <div className="text-left">
+                  <p className="text-cyan-400 font-semibold">Email</p>
+                  <p className="text-cyan-100/70 text-sm">juanpablo@example.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 p-4 bg-black/40 border border-purple-500/20 rounded-xl">
+                <div className="text-3xl">💼</div>
+                <div className="text-left">
+                  <p className="text-purple-400 font-semibold">LinkedIn</p>
+                  <p className="text-cyan-100/70 text-sm">Juan Pablo Lucero</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 p-4 bg-black/40 border border-pink-500/20 rounded-xl">
+                <div className="text-3xl">🐙</div>
+                <div className="text-left">
+                  <p className="text-pink-400 font-semibold">GitHub</p>
+                  <p className="text-cyan-100/70 text-sm">@jplucero</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 p-4 bg-black/40 border border-cyan-500/20 rounded-xl">
+                <div className="text-3xl">📱</div>
+                <div className="text-left">
+                  <p className="text-cyan-400 font-semibold">Teléfono</p>
+                  <p className="text-cyan-100/70 text-sm">+57 123 456 7890</p>
+                </div>
+              </div>
+            </div>
+
+            <button className="px-12 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-black font-bold rounded-xl hover:scale-105 transition-transform text-lg">
+              ENVIAR MENSAJE
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-cyan-500/30 relative overflow-hidden">
