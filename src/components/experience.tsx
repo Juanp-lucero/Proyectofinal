@@ -105,7 +105,6 @@ export function Experience() {
           Mi trayectoria académica y profesional en el mundo del desarrollo de software
         </p>
 
-        {/* Academic Experience */}
         <div className="mb-20">
           <h3 className="text-3xl md:text-4xl font-bold mb-10 text-center">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
@@ -137,7 +136,6 @@ export function Experience() {
           </div>
         </div>
 
-        {/* Work Experience */}
         <div>
           <h3 className="text-3xl md:text-4xl font-bold mb-10 text-center">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
@@ -187,7 +185,6 @@ export function Experience() {
           </div>
         </div>
 
-        {/* Skills Summary */}
         <div className="mt-16 text-center">
           <div className="inline-flex flex-col items-center gap-4 px-8 py-6 bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl">
             <div className="flex items-center gap-3">

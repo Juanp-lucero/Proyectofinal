@@ -22,17 +22,14 @@ export default function RootLayout({
   return (
     <html lang="es" className="dark">
       <body className={`${inter.variable} font-sans antialiased`}>
-        {/* 🔹 Barra de navegación cyberpunk */}
         <nav className="relative z-50 bg-black/60 backdrop-blur-md border-b border-cyan-500/30 shadow-lg">
           <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-            {/* Logo / Nombre */}
             <div className="text-2xl font-black tracking-widest">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 neon-glow">
                 JP LUCERO
               </span>
             </div>
 
-            {/* Links de navegación */}
             <div className="flex gap-8 text-lg font-semibold">
               <Link href="/" className="relative group transition-colors">
                 <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">INICIO</span>
@@ -67,7 +64,6 @@ export default function RootLayout({
           </div>
         </nav>
 
-        {/* 🔹 Contenido dinámico */}
         <main>{children}</main>
       </body>
     </html>

@@ -67,15 +67,12 @@ export function Testimonials() {
                 className={`relative bg-black/60 backdrop-blur-sm border-2 ${testimonial.borderColor} rounded-2xl overflow-hidden ${testimonial.hoverBorder} transition-all h-full flex flex-col`}
               >
                 <div className="p-8 flex flex-col h-full">
-                  {/* Quote Icon */}
                   <div className="text-6xl text-cyan-400/20 mb-4 leading-none">"</div>
 
-                  {/* Content */}
                   <p className="text-cyan-100/90 text-sm leading-relaxed mb-6 flex-grow italic">
                     {testimonial.content}
                   </p>
 
-                  {/* Author Info */}
                   <div className="flex items-center gap-4 pt-6 border-t border-cyan-500/20">
                     <div className="relative">
                       <div
@@ -98,7 +95,6 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* Decorative Element */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-full">
             <span className="text-2xl">⭐</span>

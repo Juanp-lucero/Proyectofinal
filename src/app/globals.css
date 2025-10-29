@@ -1,9 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* ==============================
-   🎨 Colores base (modo oscuro)
-   ============================== */
+
 :root {
   --neon-cyan: #00fff7;
   --neon-purple: #a020f0;
@@ -126,17 +124,13 @@
   }
 }
 
-/* ==============================
-   💡 Efecto neon glow
-   ============================== */
+
 .neon-glow {
   text-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-purple), 0 0 20px var(--neon-pink), 0 0 40px
     var(--neon-pink);
 }
 
-/* ==============================
-   ✨ Animación glow pulse
-   ============================== */
+
 @keyframes neon-pulse {
   0%,
   100% {
@@ -151,9 +145,7 @@
   animation: neon-pulse 2s infinite alternate;
 }
 
-/* ==============================
-   💧 Animación de ondas para el fondo
-   ============================== */
+
 @keyframes wave {
   0% {
     transform: translateX(0) translateY(0) scaleY(1);
@@ -202,9 +194,7 @@
   animation: wave-reverse 10s ease-in-out infinite;
 }
 
-/* ==============================
-   🌀 Animación float
-   ============================== */
+
 @keyframes float {
   0%,
   100% {

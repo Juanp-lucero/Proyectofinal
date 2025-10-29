@@ -4,7 +4,6 @@ import { CVButton } from "./cv-button"
 
 const AnimatedWaves = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    {/* Onda 1 - Cyan a Purple */}
     <div className="absolute -bottom-32 left-0 right-0 h-96 opacity-20">
       <svg className="absolute w-full h-full animate-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path
@@ -21,7 +20,6 @@ const AnimatedWaves = () => (
       </svg>
     </div>
 
-    {/* Onda 2 - Pink a Purple */}
     <div className="absolute -bottom-24 left-0 right-0 h-96 opacity-15">
       <svg className="absolute w-full h-full animate-wave-slow" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path
@@ -38,7 +36,6 @@ const AnimatedWaves = () => (
       </svg>
     </div>
 
-    {/* Onda 3 - Purple a Cyan */}
     <div className="absolute -bottom-16 left-0 right-0 h-96 opacity-10">
       <svg className="absolute w-full h-full animate-wave-reverse" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path
@@ -60,10 +57,8 @@ const AnimatedWaves = () => (
 export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-      {/* Background con gradiente */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/70 to-black"></div>
 
-      {/* Grid pattern */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -77,7 +72,6 @@ export function Hero() {
 
       <AnimatedWaves />
 
-      {/* Contenido principal */}
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         <div className="mb-6">
           <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-lg">

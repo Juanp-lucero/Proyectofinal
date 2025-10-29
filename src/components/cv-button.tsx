@@ -2,7 +2,7 @@
 
 export function CVButton() {
   const handleDownloadCV = () => {
-    const cvUrl = "/cv-juan-pablo-lucero.pdf" // User should add their CV file to public folder
+    const cvUrl = "/cv-juan-pablo-lucero.pdf" 
     const link = document.createElement("a")
     link.href = cvUrl
     link.download = "CV-Juan-Pablo-Lucero-Morales.pdf"
@@ -16,7 +16,7 @@ export function CVButton() {
       onClick={handleDownloadCV}
       className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-xl hover:scale-105 transition-transform flex items-center justify-center gap-3"
     >
-      {/* Document/CV Icon */}
+      
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

@@ -163,7 +163,6 @@ export function Hero() {
     <div className="min-h-screen bg-black text-white">
       <Hero />
 
-      {/* About Section */}
       <section id="sobre-mi" className="py-32 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/50 to-black"></div>
 
@@ -188,7 +187,7 @@ export function Hero() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-8">
-              {/* Descripción principal */}
+              
               <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/50 transition-all">
                 <p className="text-lg text-cyan-100/90 leading-relaxed mb-4">
                   Soy{" "}
@@ -320,7 +319,6 @@ export function Hero() {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="proyectos" className="py-32 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/30 to-black"></div>
 
@@ -344,7 +342,7 @@ export function Hero() {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Proyecto 1: Base de Datos de Estudiantes */}
+            
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all">
@@ -395,7 +393,6 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Proyecto 2: Juegos Cognitivos */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
@@ -446,7 +443,6 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Proyecto 3: Card Tailwind */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all">
@@ -497,7 +493,6 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Proyecto 4: Maquetación CSS */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all">
@@ -548,7 +543,6 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Proyecto 5: Sistema de Gestión de Tareas */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
@@ -599,7 +593,6 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Proyecto 6: Landing Page Responsive */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all">
@@ -653,13 +646,10 @@ export function Hero() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
       <Testimonials />
 
-      {/* Experience Section */}
       <Experience />
 
-      {/* Contact Section */}
       <section id="contacto" className="py-32 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/40 to-black"></div>
 
@@ -724,7 +714,6 @@ export function Hero() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-8 px-6 border-t border-cyan-500/30 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <AnimatedWaves />
