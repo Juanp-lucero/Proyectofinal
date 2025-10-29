@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Hero } from "@/components/hero"
 import { Testimonials } from "@/components/testimonials"
-import { Experience } from "@/components/experience"
+import { Experience } from "@/components/Experience"
 
 const AnimatedWaves = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
