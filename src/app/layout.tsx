@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Link from "next/link"
+import { ThemeToggle } from "@/components/theme/theme-toggle"
 import "./globals.css"
 
 const inter = Inter({
@@ -64,6 +65,7 @@ export default function RootLayout({
           </div>
         </nav>
 
+        <ThemeToggle />
         <main>{children}</main>
       </body>
     </html>
