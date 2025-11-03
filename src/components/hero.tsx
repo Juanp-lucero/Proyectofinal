@@ -1,6 +1,7 @@
 "use client"
 
 import { CVButton } from "./cv-button"
+import { useLanguage } from "./i18n/LanguageContext"
 
 const AnimatedWaves = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -55,6 +56,8 @@ const AnimatedWaves = () => (
 )
 
 export function Hero() {
+  const { t } = useLanguage();
+  
   return (
     <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/70 to-black"></div>
@@ -75,22 +78,20 @@ export function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         <div className="mb-6">
           <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-lg">
-            SOFTWARE ENGINEER
+            {t('hero.role')}
           </span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-wider">
-          <span className="text-white">JUAN PABLO</span>
+          <span className="text-white">{t('hero.greeting')}</span>
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
-            LUCERO MORALES
+            {t('hero.name')}
           </span>
         </h1>
 
         <p className="text-xl text-cyan-100/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-          Estudiante de <span className="text-cyan-400 font-bold">INGENIERÍA DE SOFTWARE</span> en quinto semestre.
-          Comprometido, proactivo y apasionado por el{" "}
-          <span className="text-purple-400 font-bold">APRENDIZAJE CONTINUO</span>.
+          {t('hero.description')}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

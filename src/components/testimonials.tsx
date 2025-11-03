@@ -1,31 +1,34 @@
+import { useLanguage } from "./i18n/LanguageContext";
+
 export function Testimonials() {
+  const { t } = useLanguage();
+  
+  const { language } = useLanguage();
+  
   const testimonials = [
     {
-      name: "Dr. Carlos Mendoza",
-      role: "Profesor de Ingeniería de Software",
+      name: language === 'es' ? "Dr. Carlos Mendoza" : "Dr. Carlos Mendoza",
+      role: language === 'es' ? "Profesor de Ingeniería de Software" : "Software Engineering Professor",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-      content:
-        "Juan Pablo es uno de los estudiantes más dedicados que he tenido. Su capacidad para resolver problemas complejos y su constante búsqueda de aprendizaje lo destacan del resto. Siempre entrega proyectos de alta calidad y demuestra un profundo entendimiento de los conceptos de programación.",
+      content: t('testimonials.professor.text'),
       gradient: "from-cyan-500 to-purple-500",
       borderColor: "border-cyan-500/30",
       hoverBorder: "hover:border-cyan-500/70",
     },
     {
-      name: "María González",
-      role: "Compañera de Proyecto - Hackathon 2024",
+      name: language === 'es' ? "María González" : "Maria Gonzalez",
+      role: language === 'es' ? "Compañera de Proyecto - Hackathon 2024" : "Project Teammate - Hackathon 2024",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-      content:
-        "Trabajar con Juan Pablo fue una experiencia increíble. Su habilidad para trabajar en equipo y su proactividad hicieron que nuestro proyecto fuera un éxito. Siempre está dispuesto a ayudar y aporta ideas innovadoras. Es el tipo de desarrollador con el que cualquiera querría colaborar.",
+      content: t('testimonials.teammate.text'),
       gradient: "from-purple-500 to-pink-500",
       borderColor: "border-purple-500/30",
       hoverBorder: "hover:border-purple-500/70",
     },
     {
-      name: "Roberto Silva",
-      role: "Cliente - Sistema de Gestión Académica",
+      name: language === 'es' ? "Roberto Silva" : "Roberto Silva",
+      role: language === 'es' ? "Cliente Freelance" : "Freelance Client",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-      content:
-        "Contraté a Juan Pablo para desarrollar un sistema de gestión para mi institución educativa. No solo cumplió con todos los requisitos, sino que superó mis expectativas. Su atención al detalle, comunicación constante y compromiso con la calidad son excepcionales. Definitivamente lo recomendaría.",
+      content: t('testimonials.client_roberto.text'),
       gradient: "from-pink-500 to-cyan-500",
       borderColor: "border-pink-500/30",
       hoverBorder: "hover:border-pink-500/70",
@@ -49,12 +52,11 @@ export function Testimonials() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-7xl font-black mb-6 text-center">
-          <span className="text-cyan-400 neon-glow">TESTI</span>
-          <span className="text-pink-500 neon-glow">MONIOS</span>
+          <span className="text-cyan-400 neon-glow">{t('testimonials.title')}</span>
         </h2>
 
         <p className="text-center text-cyan-100/70 text-lg mb-16 max-w-2xl mx-auto">
-          Lo que dicen quienes han trabajado conmigo
+          {t('testimonials.subtitle')}
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,7 +100,7 @@ export function Testimonials() {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-full">
             <span className="text-2xl">⭐</span>
-            <span className="text-cyan-100/90 font-semibold">Comprometido con la excelencia</span>
+            <span className="text-cyan-100/90 font-semibold">{t('testimonials.excellence')}</span>
             <span className="text-2xl">⭐</span>
           </div>
         </div>

@@ -1,64 +1,66 @@
-"use client"
+'use client'
 
 import { useState } from "react"
 import { Hero } from "@/components/hero"
-import { Testimonials } from "@/components/testimonials"
 import { Experience } from "@/components/Experience"
-
-const AnimatedWaves = () => (
-  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    <div className="absolute -bottom-32 left-0 right-0 h-96 opacity-20">
-      <svg className="absolute w-full h-full animate-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
-        <path
-          fill="url(#wave-gradient-1)"
-          d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-        <defs>
-          <linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#00fff7" />
-            <stop offset="50%" stopColor="#a020f0" />
-            <stop offset="100%" stopColor="#ff0080" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-
-    <div className="absolute -bottom-24 left-0 right-0 h-96 opacity-15">
-      <svg className="absolute w-full h-full animate-wave-slow" viewBox="0 0 1440 320" preserveAspectRatio="none">
-        <path
-          fill="url(#wave-gradient-2)"
-          d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-        <defs>
-          <linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#ff0080" />
-            <stop offset="50%" stopColor="#a020f0" />
-            <stop offset="100%" stopColor="#00fff7" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-
-    <div className="absolute -bottom-16 left-0 right-0 h-96 opacity-10">
-      <svg className="absolute w-full h-full animate-wave-reverse" viewBox="0 0 1440 320" preserveAspectRatio="none">
-        <path
-          fill="url(#wave-gradient-3)"
-          d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,234.7C672,245,768,235,864,213.3C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-        <defs>
-          <linearGradient id="wave-gradient-3" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#a020f0" />
-            <stop offset="50%" stopColor="#00fff7" />
-            <stop offset="100%" stopColor="#ff0080" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-  </div>
-)
+import { Testimonials } from "@/components/testimonials"
+import { useLanguage } from "@/components/i18n/LanguageContext"
 
 export default function Home() {
-  const [showCode, setShowCode] = useState<number | null>(null)
+  const [showCode, setShowCode] = useState<number | null>(null);
+  const { language, t } = useLanguage();
+
+  const AnimatedWaves = () => (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute -bottom-32 left-0 right-0 h-96 opacity-20">
+        <svg className="absolute w-full h-full animate-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="url(#wave-gradient-1)"
+            d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+          <defs>
+            <linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#00fff7" />
+              <stop offset="50%" stopColor="#a020f0" />
+              <stop offset="100%" stopColor="#ff0080" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div className="absolute -bottom-24 left-0 right-0 h-96 opacity-15">
+        <svg className="absolute w-full h-full animate-wave-slow" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="url(#wave-gradient-2)"
+            d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+          <defs>
+            <linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#ff0080" />
+              <stop offset="50%" stopColor="#a020f0" />
+              <stop offset="100%" stopColor="#00fff7" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div className="absolute -bottom-16 left-0 right-0 h-96 opacity-10">
+        <svg className="absolute w-full h-full animate-wave-reverse" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="url(#wave-gradient-3)"
+            d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,234.7C672,245,768,235,864,213.3C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+          <defs>
+            <linearGradient id="wave-gradient-3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#a020f0" />
+              <stop offset="50%" stopColor="#00fff7" />
+              <stop offset="100%" stopColor="#ff0080" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  )
 
   const projectsCode = {
     1: `// Sistema de Base de Datos de Estudiantes
@@ -181,8 +183,8 @@ export function Hero() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-5xl md:text-7xl font-black mb-16 text-center">
-            <span className="text-cyan-400 neon-glow">SOBRE </span>
-            <span className="text-pink-500 neon-glow">MÍ</span>
+            <span className="text-cyan-400 neon-glow">{useLanguage().language === 'en' ? 'ABOUT ' : 'SOBRE '}</span>
+            <span className="text-pink-500 neon-glow">{useLanguage().language === 'en' ? 'ME' : 'MÍ'}</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -190,20 +192,51 @@ export function Hero() {
               
               <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/50 transition-all">
                 <p className="text-lg text-cyan-100/90 leading-relaxed mb-4">
-                  Soy{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 font-bold">
-                    JUAN PABLO LUCERO MORALES
-                  </span>
-                  , estudiante de Ingeniería de Software en quinto semestre.
+                  {language === 'es' ? (
+                    <>
+                      Soy{" "}
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 font-bold">
+                        JUAN PABLO LUCERO MORALES
+                      </span>
+                      , estudiante de Ingeniería de Software en quinto semestre.
+                    </>
+                  ) : (
+                    <>
+                      I am{" "}
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 font-bold">
+                        JUAN PABLO LUCERO MORALES
+                      </span>
+                      , a fifth-semester Software Engineering student.
+                    </>
+                  )}
                 </p>
                 <p className="text-lg text-cyan-100/90 leading-relaxed mb-4">
-                  Me caracterizo por ser una persona <span className="text-cyan-400 font-bold">COMPROMETIDA</span>,{" "}
-                  <span className="text-purple-400 font-bold">PROACTIVA</span> y apasionada por el aprendizaje continuo.
+                  {language === 'es' ? (
+                    <>
+                      Me caracterizo por ser una persona <span className="text-cyan-400 font-bold">COMPROMETIDA</span>,{" "}
+                      <span className="text-purple-400 font-bold">PROACTIVA</span> y apasionada por el aprendizaje continuo.
+                    </>
+                  ) : (
+                    <>
+                      I am characterized by being a <span className="text-cyan-400 font-bold">COMMITTED</span>,{" "}
+                      <span className="text-purple-400 font-bold">PROACTIVE</span> person passionate about continuous learning.
+                    </>
+                  )}
                 </p>
                 <p className="text-lg text-cyan-100/90 leading-relaxed mb-4">
-                  A lo largo de mi formación he demostrado constancia y dedicación en cada proyecto académico, aplicando
-                  mis conocimientos tanto en el <span className="text-cyan-400 font-bold">DESARROLLO TÉCNICO</span> como
-                  en la solución creativa de problemas.
+                  {language === 'es' ? (
+                    <>
+                      A lo largo de mi formación he demostrado constancia y dedicación en cada proyecto académico, aplicando
+                      mis conocimientos tanto en el <span className="text-cyan-400 font-bold">DESARROLLO TÉCNICO</span> como
+                      en la solución creativa de problemas.
+                    </>
+                  ) : (
+                    <>
+                      Throughout my education, I have demonstrated consistency and dedication in each academic project, applying
+                      my knowledge in both <span className="text-cyan-400 font-bold">TECHNICAL DEVELOPMENT</span> and
+                      creative problem solving.
+                    </>
+                  )}
                 </p>
                 <p className="text-lg text-cyan-100/90 leading-relaxed">
                   Mi enfoque está en crecer como{" "}
@@ -217,15 +250,24 @@ export function Hero() {
 
               <div className="bg-black/40 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all">
                 <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-4">
-                  FORMACIÓN ADICIONAL
+                  {language === 'es' ? 'FORMACIÓN ADICIONAL' : 'ADDITIONAL TRAINING'}
                 </h3>
                 <div className="flex items-start gap-3">
                   <div className="text-3xl">📊</div>
                   <div>
                     <p className="text-cyan-100/90 leading-relaxed">
-                      He completado un curso de <span className="text-purple-400 font-bold">ANÁLISIS DE DATOS</span>,
-                      ampliando mis habilidades en la interpretación y visualización de información para la toma de
-                      decisiones estratégicas.
+                      {language === 'es' ? (
+                        <>
+                          He completado un curso de <span className="text-purple-400 font-bold">ANÁLISIS DE DATOS</span>,
+                          ampliando mis habilidades en la interpretación y visualización de información para la toma de
+                          decisiones estratégicas.
+                        </>
+                      ) : (
+                        <>
+                          I have completed a <span className="text-purple-400 font-bold">DATA ANALYSIS</span> course,
+                          expanding my skills in interpreting and visualizing information for strategic decision-making.
+                        </>
+                      )}
                     </p>
                   </div>
                 </div>
@@ -233,11 +275,13 @@ export function Hero() {
 
               <div className="bg-black/40 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl p-8 hover:border-pink-500/50 transition-all">
                 <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-6">
-                  MÁS ALLÁ DEL CÓDIGO
+                  {language === 'es' ? 'MÁS ALLÁ DEL CÓDIGO' : 'BEYOND THE CODE'}
                 </h3>
 
                 <p className="text-cyan-100/80 leading-relaxed mb-4">
-                  Fuera del mundo de la programación, mantengo un estilo de vida activo y saludable. Disfruto de:
+                  {language === 'es' 
+                    ? 'Fuera del mundo de la programación, mantengo un estilo de vida activo y saludable. Disfruto de:'
+                    : 'Outside the programming world, I maintain an active and healthy lifestyle. I enjoy:'}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 bg-black/40 border border-cyan-500/20 rounded-lg p-3">
@@ -267,7 +311,7 @@ export function Hero() {
             <div className="space-y-8">
               <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/50 transition-all">
                 <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 mb-8 text-center">
-                  TECH STACK
+                  {language === 'es' ? 'TECH STACK' : 'TECH STACK'}
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
@@ -297,7 +341,9 @@ export function Hero() {
                   <div className="text-center">
                     <div className="text-6xl mb-4">💡</div>
                     <p className="text-xl text-cyan-100/90 leading-relaxed italic">
-                      "La tecnología es mejor cuando acerca a las personas"
+                      {language === 'es' 
+                        ? "\"La tecnología es mejor cuando acerca a las personas\""
+                        : "\"Technology is best when it brings people together\""}
                     </p>
                     <p className="text-cyan-400/70 text-sm mt-4">- Matt Mullenweg</p>
                   </div>
@@ -337,8 +383,8 @@ export function Hero() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-5xl md:text-7xl font-black mb-16 text-center">
-            <span className="text-cyan-400 neon-glow">MIS </span>
-            <span className="text-pink-500 neon-glow">PROYECTOS</span>
+            <span className="text-cyan-400 neon-glow">{useLanguage().language === 'en' ? 'MY ' : 'MIS '}</span>
+            <span className="text-pink-500 neon-glow">{useLanguage().language === 'en' ? 'PROJECTS' : 'PROYECTOS'}</span>
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -356,11 +402,12 @@ export function Hero() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-3">
-                    Base de Datos de Estudiantes
+                    {language === 'es' ? "Base de Datos de Estudiantes" : "Student Database System"}
                   </h3>
                   <p className="text-cyan-100/80 text-sm mb-4 leading-relaxed">
-                    Sistema completo de gestión académica con MySQL. Permite registrar, consultar y administrar
-                    información de estudiantes, cursos y calificaciones con interfaz intuitiva.
+                    {language === 'es' 
+                      ? "Sistema completo de gestión académica con MySQL. Permite registrar, consultar y administrar información de estudiantes, cursos y calificaciones con interfaz intuitiva."
+                      : "Complete academic management system with MySQL. Allows registering, querying, and managing student information, courses, and grades with an intuitive interface."}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-xs">
@@ -379,7 +426,9 @@ export function Hero() {
                     className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
                   >
                     <span className="text-lg">{"</>"}</span>
-                    {showCode === 1 ? "Ocultar Código" : "Ver Código"}
+                    {showCode === 1 
+                      ? (language === 'es' ? "Ocultar Código" : "Hide Code") 
+                      : (language === 'es' ? "Ver Código" : "View Code")}
                   </button>
 
                   {showCode === 1 && (
@@ -406,11 +455,12 @@ export function Hero() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-3">
-                    Juegos Cognitivos
+                    {language === 'es' ? 'Juegos Cognitivos' : 'Cognitive Games'}
                   </h3>
                   <p className="text-cyan-100/80 text-sm mb-4 leading-relaxed">
-                    Colección interactiva de juegos diseñados para estimular habilidades cognitivas como memoria,
-                    atención y lógica. Incluye sistema de puntuación y niveles progresivos.
+                    {language === 'es' 
+                      ? 'Colección de juegos para estimular la memoria y concentración. Incluye juegos de memoria, puzzles y ejercicios de atención con dificultad progresiva.'
+                      : 'Collection of games designed to stimulate memory and concentration. Includes memory games, puzzles and attention exercises with progressive difficulty.'}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-400 text-xs">
@@ -429,7 +479,7 @@ export function Hero() {
                     className="w-full px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
                   >
                     <span className="text-lg">{"</>"}</span>
-                    {showCode === 2 ? "Ocultar Código" : "Ver Código"}
+                    {showCode === 2 ? (language === 'es' ? "Ocultar Código" : "Hide Code") : (language === 'es' ? "Ver Código" : "View Code")}
                   </button>
 
                   {showCode === 2 && (
@@ -456,11 +506,12 @@ export function Hero() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-cyan-500 mb-3">
-                    Card Components Tailwind
+                    {language === 'es' ? 'Card Components Tailwind' : 'Tailwind Card Components'}
                   </h3>
                   <p className="text-cyan-100/80 text-sm mb-4 leading-relaxed">
-                    Biblioteca de componentes de tarjetas reutilizables construidas con Tailwind CSS. Incluye variantes,
-                    animaciones y diseños responsivos listos para producción.
+                    {language === 'es' 
+                      ? 'Biblioteca de componentes de tarjetas reutilizables construidas con Tailwind CSS. Incluye variantes, animaciones y diseños responsivos.'
+                      : 'Library of reusable card components built with Tailwind CSS. Includes variants, animations and responsive designs.'}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded-full text-pink-400 text-xs">
@@ -479,7 +530,7 @@ export function Hero() {
                     className="w-full px-4 py-3 bg-gradient-to-r from-pink-500 to-cyan-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
                   >
                     <span className="text-lg">{"</>"}</span>
-                    {showCode === 3 ? "Ocultar Código" : "Ver Código"}
+                    {showCode === 3 ? (language === 'es' ? "Ocultar Código" : "Hide Code") : (language === 'es' ? "Ver Código" : "View Code")}
                   </button>
 
                   {showCode === 3 && (
@@ -505,12 +556,13 @@ export function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 mb-3">
-                    Maquetación CSS Avanzada
+                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-3">
+                    {language === 'es' ? 'Diseños CSS Avanzados' : 'Advanced CSS Layouts'}
                   </h3>
                   <p className="text-cyan-100/80 text-sm mb-4 leading-relaxed">
-                    Proyecto de layouts complejos usando CSS Grid y Flexbox. Incluye diseños responsivos, animaciones
-                    CSS puras y técnicas modernas de maquetación web.
+                    {language === 'es' 
+                      ? 'Colección de diseños web responsivos utilizando técnicas avanzadas de CSS como Grid, Flexbox y animaciones. Incluye plantillas modernas para diferentes tipos de sitios web.'
+                      : 'Collection of responsive web designs using advanced CSS techniques like Grid, Flexbox and animations. Includes modern templates for different types of websites.'}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-xs">
@@ -666,11 +718,11 @@ export function Hero() {
 
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <h2 className="text-5xl md:text-7xl font-black mb-6">
-            <span className="text-cyan-400 neon-glow">CONTAC</span>
-            <span className="text-pink-500 neon-glow">TO</span>
+            <span className="text-cyan-400 neon-glow">{useLanguage().language === 'en' ? 'CONT' : 'CONTAC'}</span>
+            <span className="text-pink-500 neon-glow">{useLanguage().language === 'en' ? 'ACT' : 'TO'}</span>
           </h2>
 
-          <p className="text-cyan-100/70 text-lg mb-12">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+          <p className="text-cyan-100/70 text-lg mb-12">{useLanguage().language === 'en' ? 'Do you have a project in mind? Let\'s talk!' : '¿Tienes un proyecto en mente? ¡Hablemos!'}</p>
 
           <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8">
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -708,7 +760,7 @@ export function Hero() {
             </div>
 
             <button className="px-12 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-black font-bold rounded-xl hover:scale-105 transition-transform text-lg">
-              ENVIAR MENSAJE
+              {language === 'es' ? 'ENVIAR MENSAJE' : 'SEND MESSAGE'}
             </button>
           </div>
         </div>

@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "greeting": "¡Hola! Soy",
+    "name": "Juan Pablo Lucero",
+    "role": "Ingeniero de Software",
+    "description": "Apasionado por crear experiencias web innovadoras y funcionales",
+    "contact": "CONTACTAR"
+  },
+  "about": {
+    "title": "SOBRE MÍ",
+    "description": "Soy un desarrollador web con experiencia en tecnologías frontend y backend. Me especializo en crear aplicaciones web modernas y responsivas utilizando las últimas tecnologías.",
+    "student": "Estudiante de INGENIERÍA DE SOFTWARE en quinto semestre. Comprometido, proactivo y apasionado por el APRENDIZAJE CONTINUO."
+  },
+  "experience": {
+    "title": "EXPERIENCIA",
+    "years": "Años de experiencia",
+    "frontend": "Desarrollo Frontend",
+    "backend": "Desarrollo Backend",
+    "mobile": "Desarrollo Móvil",
+    "design": "Diseño UI/UX",
+    "academic": {
+      "title": "Formación Académica",
+      "software_engineering": {
+        "title": "Ingeniería de Software",
+        "institution": "Universidad Tecnológica",
+        "period": "2022 - Presente",
+        "description": "Actualmente cursando quinto semestre con enfoque en desarrollo web full-stack, bases de datos y arquitectura de software. Promedio destacado y participación activa en proyectos colaborativos."
+      },
+      "data_analysis": {
+        "title": "Curso de Análisis de Datos",
+        "institution": "Plataforma Online Certificada",
+        "period": "2024",
+        "description": "Certificación en análisis de datos con Python, visualización con Matplotlib y Pandas, y técnicas de limpieza y procesamiento de información para toma de decisiones estratégicas."
+      },
+      "web_bootcamp": {
+        "title": "Bootcamp de Desarrollo Web",
+        "institution": "Academia de Programación",
+        "period": "2023",
+        "description": "Programa intensivo de 6 meses enfocado en tecnologías modernas: React, Next.js, TypeScript, Node.js y bases de datos SQL/NoSQL. Desarrollo de 8 proyectos prácticos."
+      }
+    },
+    "work": {
+      "title": "Experiencia Laboral"
+    }
+  },
+  "testimonials": {
+    "title": "TESTIMONIOS",
+    "subtitle": "Lo que dicen de mí",
+    "client1": {
+      "name": "María González",
+      "role": "CEO de TechSolutions",
+      "text": "Juan Pablo demostró un excelente dominio técnico y una gran capacidad para resolver problemas complejos."
+    },
+    "client2": {
+      "name": "Carlos Rodríguez",
+      "role": "Director de Proyectos",
+      "text": "Su compromiso y profesionalismo hicieron que el proyecto fuera un éxito rotundo."
+    },
+    "client3": {
+      "name": "Laura Martínez",
+      "role": "Diseñadora UX",
+      "text": "Trabajar con Juan Pablo fue una experiencia muy enriquecedora. Su atención al detalle es impresionante."
+    },
+    "professor": {
+      "name": "Dr. Carlos Mendoza",
+      "role": "Profesor de Ingeniería de Software",
+      "text": "Juan Pablo es uno de los estudiantes más dedicados que he tenido. Su capacidad para resolver problemas complejos y su constante búsqueda de aprendizaje lo destacan del resto. Siempre entrega proyectos de alta calidad y demuestra un profundo entendimiento de los conceptos de programación."
+    },
+    "teammate": {
+      "name": "María González",
+      "role": "Compañera de Proyecto - Hackathon 2024",
+      "text": "Trabajar con Juan Pablo fue una experiencia increíble. Su habilidad para trabajar en equipo y su proactividad hicieron que nuestro proyecto fuera un éxito. Siempre está dispuesto a ayudar y aporta ideas innovadoras. Es el tipo de desarrollador con el que cualquiera querría colaborar."
+    },
+    "client_roberto": {
+      "name": "Roberto Silva",
+      "role": "Cliente Freelance",
+      "text": "Juan Pablo desarrolló mi sitio web de comercio electrónico con gran profesionalismo. Entendió perfectamente mis necesidades y entregó un producto que superó mis expectativas. Su comunicación fue clara y constante durante todo el proceso."
+    },
+    "excellence": "Compromiso con la excelencia"
+  },
+  "projects": {
+    "title": "PROYECTOS",
+    "viewCode": "Ver código",
+    "viewDemo": "Ver demo",
+    "description": "Estos son algunos de los proyectos en los que he trabajado recientemente"
+  },
+  "contact": {
+    "title": "CONTACTO",
+    "subtitle": "¿Interesado en trabajar juntos? ¡Contáctame!",
+    "email": "Correo electrónico",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "phone": "Teléfono",
+    "send_message": "ENVIAR MENSAJE"
+  },
+  "footer": {
+    "copyright": "© 2025 Juan Pablo Lucero Morales. Todos los derechos reservados."
+  },
+  "cv": {
+    "download": "DESCARGAR CV"
+  },
+  "language": {
+    "select": "Seleccionar idioma",
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "navigation": {
+    "home": "INICIO",
+    "about": "SOBRE MÍ",
+    "projects": "PROYECTOS",
+    "testimonials": "TESTIMONIOS",
+    "experience": "EXPERIENCIA",
+    "contact": "CONTACTO"
+  }
+}
