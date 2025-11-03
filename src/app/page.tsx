@@ -1,10 +1,10 @@
 'use client'
 
 import { useState } from "react"
-import { Hero } from "@/components/hero"
-import { Experience } from "@/components/Experience"
-import { Testimonials } from "@/components/testimonials"
-import { useLanguage } from "@/components/i18n/LanguageContext"
+import { Hero } from "../components/hero"
+import { Experience } from "../components/Experience"
+import { Testimonials } from "../components/testimonials"
+import { useLanguage } from "../components/i18n/LanguageContext"
 
 export default function Home() {
   const [showCode, setShowCode] = useState<number | null>(null);
