@@ -384,11 +384,11 @@ export function Hero() {
             <span className="text-pink-500 neon-glow">{language === 'en' ? 'PROJECTS' : 'PROYECTOS'}</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr items-stretch">
             
-            <div className="group relative">
+            <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
-              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all">
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=400&fit=crop"
@@ -417,31 +417,14 @@ export function Hero() {
                       Bootstrap
                     </span>
                   </div>
-
-                  <button
-                    onClick={() => setShowCode(showCode === 1 ? null : 1)}
-                    className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
-                  >
-                    <span className="text-lg">{"</>"}</span>
-                    {showCode === 1 
-                      ? (language === 'es' ? "Ocultar Código" : "Hide Code") 
-                      : (language === 'es' ? "Ver Código" : "View Code")}
-                  </button>
-
-                  {showCode === 1 && (
-                    <div className="mt-4 bg-black/80 border border-cyan-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
-                      <pre className="text-cyan-400 text-xs">
-                        <code>{projectsCode[1]}</code>
-                      </pre>
-                    </div>
-                  )}
+                  
                 </div>
               </div>
             </div>
 
-            <div className="group relative">
+            <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
-              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop"
@@ -470,29 +453,14 @@ export function Hero() {
                       CSS3
                     </span>
                   </div>
-
-                  <button
-                    onClick={() => setShowCode(showCode === 2 ? null : 2)}
-                    className="w-full px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
-                  >
-                    <span className="text-lg">{"</>"}</span>
-                    {showCode === 2 ? (language === 'es' ? "Ocultar Código" : "Hide Code") : (language === 'es' ? "Ver Código" : "View Code")}
-                  </button>
-
-                  {showCode === 2 && (
-                    <div className="mt-4 bg-black/80 border border-purple-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
-                      <pre className="text-purple-400 text-xs">
-                        <code>{projectsCode[2]}</code>
-                      </pre>
-                    </div>
-                  )}
+                  
                 </div>
               </div>
             </div>
 
-            <div className="group relative">
+            <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
-              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all">
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&h=400&fit=crop"
@@ -521,29 +489,14 @@ export function Hero() {
                       TypeScript
                     </span>
                   </div>
-
-                  <button
-                    onClick={() => setShowCode(showCode === 3 ? null : 3)}
-                    className="w-full px-4 py-3 bg-gradient-to-r from-pink-500 to-cyan-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
-                  >
-                    <span className="text-lg">{"</>"}</span>
-                    {showCode === 3 ? (language === 'es' ? "Ocultar Código" : "Hide Code") : (language === 'es' ? "Ver Código" : "View Code")}
-                  </button>
-
-                  {showCode === 3 && (
-                    <div className="mt-4 bg-black/80 border border-pink-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
-                      <pre className="text-pink-400 text-xs">
-                        <code>{projectsCode[3]}</code>
-                      </pre>
-                    </div>
-                  )}
+                  
                 </div>
               </div>
             </div>
 
-            <div className="group relative">
+            <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
-              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all">
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop"
@@ -572,29 +525,14 @@ export function Hero() {
                       Responsive
                     </span>
                   </div>
-
-                  <button
-                    onClick={() => setShowCode(showCode === 4 ? null : 4)}
-                    className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-pink-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
-                  >
-                    <span className="text-lg">{"</>"}</span>
-                    {showCode === 4 ? "Ocultar Código" : "Ver Código"}
-                  </button>
-
-                  {showCode === 4 && (
-                    <div className="mt-4 bg-black/80 border border-cyan-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
-                      <pre className="text-cyan-400 text-xs">
-                        <code>{projectsCode[4]}</code>
-                      </pre>
-                    </div>
-                  )}
+                  
                 </div>
               </div>
             </div>
 
-            <div className="group relative">
+            <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
-              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all">
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src="https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg"
@@ -622,29 +560,14 @@ export function Hero() {
                       TypeScript
                     </span>
                   </div>
-
-                  <button
-                    onClick={() => setShowCode(showCode === 5 ? null : 5)}
-                    className="w-full px-4 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
-                  >
-                    <span className="text-lg">{"</>"}</span>
-                    {showCode === 5 ? "Ocultar Código" : "Ver Código"}
-                  </button>
-
-                  {showCode === 5 && (
-                    <div className="mt-4 bg-black/80 border border-purple-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
-                      <pre className="text-purple-400 text-xs">
-                        <code>{projectsCode[5]}</code>
-                      </pre>
-                    </div>
-                  )}
+                  
                 </div>
               </div>
             </div>
 
-            <div className="group relative">
+            <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
-              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all">
+              <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
@@ -672,22 +595,7 @@ export function Hero() {
                       Framer Motion
                     </span>
                   </div>
-
-                  <button
-                    onClick={() => setShowCode(showCode === 6 ? null : 6)}
-                    className="w-full px-4 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-black font-bold rounded-lg text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2"
-                  >
-                    <span className="text-lg">{"</>"}</span>
-                    {showCode === 6 ? "Ocultar Código" : "Ver Código"}
-                  </button>
-
-                  {showCode === 6 && (
-                    <div className="mt-4 bg-black/80 border border-pink-500/30 rounded-lg p-4 overflow-x-auto animate-in slide-in-from-top duration-300">
-                      <pre className="text-pink-400 text-xs">
-                        <code>{projectsCode[6]}</code>
-                      </pre>
-                    </div>
-                  )}
+                  
                 </div>
               </div>
             </div>
