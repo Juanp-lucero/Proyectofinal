@@ -40,7 +40,46 @@
       }
     },
     "work": {
-      "title": "Work Experience"
+      "title": "Work Experience",
+      "items": [
+        {
+          "title": "Junior Frontend Developer",
+          "company": "Tech Solutions S.A.",
+          "period": "Jan 2024 - Present",
+          "description": "Development of responsive user interfaces with React and TypeScript. Agile team collaboration to implement new features and optimize web app performance.",
+          "achievements": [
+            "30% reduction in page load time",
+            "Implemented 15+ reusable components",
+            "Improved web accessibility (WCAG 2.1)"
+          ]
+        },
+        {
+          "title": "Freelance Developer",
+          "company": "Independent Projects",
+          "period": "2023 - 2024",
+          "description": "Development of custom web solutions for small businesses and entrepreneurs. Full project management from design to production deployment.",
+          "achievements": [
+            "5+ projects successfully completed",
+            "100% client satisfaction",
+            "Implemented management systems and e-commerce"
+          ]
+        },
+        {
+          "title": "Development Assistant",
+          "company": "University Innovation Lab",
+          "period": "2023",
+          "description": "Support in research projects and development of technological prototypes. Collaboration with professors and students to implement innovative solutions.",
+          "achievements": [
+            "Participated in 3 research projects",
+            "Developed an educational app prototype",
+            "Presented at student conference"
+          ]
+        }
+      ]
+    },
+    "growth": {
+      "title": "Continuous growth and learning",
+      "text": "Each project and experience has allowed me to develop technical and soft skills, preparing me to face increasingly complex challenges in the world of software development."
     }
   },
   "testimonials": {
@@ -103,6 +142,17 @@
     "select": "Select language",
     "es": "Spanish",
     "en": "English"
+  },
+  "beyond": {
+    "title": "BEYOND THE CODE",
+    "intro": "Outside the programming world, I maintain an active and healthy lifestyle. I enjoy:",
+    "activities": {
+      "cycling": "Cycling",
+      "running": "Running",
+      "sports": "Sports",
+      "fitness": "Fitness"
+    },
+    "footer": "These activities help me maintain balance, discipline, and the energy needed to face new challenges both personally and professionally."
   },
   "navigation": {
     "home": "HOME",

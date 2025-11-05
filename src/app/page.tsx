@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Hero } from "../components/hero"
 import { Experience } from "../components/Experience"
 import { Testimonials } from "../components/testimonials"
-import { useLanguage } from "../components/i18n/LanguageContext"
+import { useLanguage } from "@/components/i18n/LanguageContext"
 
 export default function Home() {
   const [showCode, setShowCode] = useState<number | null>(null);
@@ -183,8 +183,8 @@ export function Hero() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-5xl md:text-7xl font-black mb-16 text-center">
-            <span className="text-cyan-400 neon-glow">{useLanguage().language === 'en' ? 'ABOUT ' : 'SOBRE '}</span>
-            <span className="text-pink-500 neon-glow">{useLanguage().language === 'en' ? 'ME' : 'MÍ'}</span>
+            <span className="text-cyan-400 neon-glow">{language === 'en' ? 'ABOUT ' : 'SOBRE '}</span>
+            <span className="text-pink-500 neon-glow">{language === 'en' ? 'ME' : 'MÍ'}</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -275,35 +275,32 @@ export function Hero() {
 
               <div className="bg-black/40 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl p-8 hover:border-pink-500/50 transition-all">
                 <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-6">
-                  {language === 'es' ? 'MÁS ALLÁ DEL CÓDIGO' : 'BEYOND THE CODE'}
+                  {t("beyond.title")}
                 </h3>
 
                 <p className="text-cyan-100/80 leading-relaxed mb-4">
-                  {language === 'es' 
-                    ? 'Fuera del mundo de la programación, mantengo un estilo de vida activo y saludable. Disfruto de:'
-                    : 'Outside the programming world, I maintain an active and healthy lifestyle. I enjoy:'}
+                  {t("beyond.intro")}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center gap-3 bg-black/40 border border-cyan-500/20 rounded-lg p-3">
                     <span className="text-2xl">🚴</span>
-                    <span className="text-cyan-400 font-semibold">Ciclismo</span>
+                    <span className="text-cyan-400 font-semibold">{t("beyond.activities.cycling")}</span>
                   </div>
                   <div className="flex items-center gap-3 bg-black/40 border border-purple-500/20 rounded-lg p-3">
                     <span className="text-2xl">🏃</span>
-                    <span className="text-purple-400 font-semibold">Running</span>
+                    <span className="text-purple-400 font-semibold">{t("beyond.activities.running")}</span>
                   </div>
                   <div className="flex items-center gap-3 bg-black/40 border border-pink-500/20 rounded-lg p-3">
                     <span className="text-2xl">⚽</span>
-                    <span className="text-pink-400 font-semibold">Deportes</span>
+                    <span className="text-pink-400 font-semibold">{t("beyond.activities.sports")}</span>
                   </div>
                   <div className="flex items-center gap-3 bg-black/40 border border-cyan-500/20 rounded-lg p-3">
                     <span className="text-2xl">💪</span>
-                    <span className="text-cyan-400 font-semibold">Fitness</span>
+                    <span className="text-cyan-400 font-semibold">{t("beyond.activities.fitness")}</span>
                   </div>
                 </div>
                 <p className="text-cyan-100/70 text-sm mt-4 leading-relaxed">
-                  Estas actividades me ayudan a mantener el equilibrio, la disciplina y la energía necesaria para
-                  enfrentar nuevos desafíos tanto personales como profesionales.
+                  {t("beyond.footer")}
                 </p>
               </div>
             </div>
@@ -383,8 +380,8 @@ export function Hero() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-5xl md:text-7xl font-black mb-16 text-center">
-            <span className="text-cyan-400 neon-glow">{useLanguage().language === 'en' ? 'MY ' : 'MIS '}</span>
-            <span className="text-pink-500 neon-glow">{useLanguage().language === 'en' ? 'PROJECTS' : 'PROYECTOS'}</span>
+            <span className="text-cyan-400 neon-glow">{language === 'en' ? 'MY ' : 'MIS '}</span>
+            <span className="text-pink-500 neon-glow">{language === 'en' ? 'PROJECTS' : 'PROYECTOS'}</span>
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -718,11 +715,11 @@ export function Hero() {
 
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <h2 className="text-5xl md:text-7xl font-black mb-6">
-            <span className="text-cyan-400 neon-glow">{useLanguage().language === 'en' ? 'CONT' : 'CONTAC'}</span>
-            <span className="text-pink-500 neon-glow">{useLanguage().language === 'en' ? 'ACT' : 'TO'}</span>
+            <span className="text-cyan-400 neon-glow">{language === 'en' ? 'CONT' : 'CONTAC'}</span>
+            <span className="text-pink-500 neon-glow">{language === 'en' ? 'ACT' : 'TO'}</span>
           </h2>
 
-          <p className="text-cyan-100/70 text-lg mb-12">{useLanguage().language === 'en' ? 'Do you have a project in mind? Let\'s talk!' : '¿Tienes un proyecto en mente? ¡Hablemos!'}</p>
+          <p className="text-cyan-100/70 text-lg mb-12">{language === 'en' ? 'Do you have a project in mind? Let\'s talk!' : '¿Tienes un proyecto en mente? ¡Hablemos!'}</p>
 
           <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8">
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -766,7 +763,7 @@ export function Hero() {
         </div>
       </section>
 
-      <footer className="py-8 px-6 border-t border-cyan-500/30 relative overflow-hidden">
+      <footer className="py-8 px-6 border-t border-border relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <AnimatedWaves />
         </div>

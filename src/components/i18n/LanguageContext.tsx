@@ -11,7 +11,7 @@ type Translations = {
 type LanguageContextType = {
   language: string;
   setLanguage: (lang: string) => void;
-  t: (key: string) => string;
+  t: (key: string) => any;
 };
 
 const translations: { [key: string]: Translations } = {
@@ -35,10 +35,10 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     localStorage.setItem('language', language);
   }, [language]);
 
-  const t = (key: string): string => {
+  const t = (key: string): any => {
     const keys = key.split('.');
-    let value = translations[language];
-    
+    let value: any = translations[language];
+
     for (const k of keys) {
       if (value && value[k]) {
         value = value[k];
@@ -46,8 +46,9 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
         return key;
       }
     }
-    
-    return typeof value === 'string' ? value : key;
+
+    // Permitir devolver strings, objetos o arrays según el contenido
+    return value;
   };
 
   return (

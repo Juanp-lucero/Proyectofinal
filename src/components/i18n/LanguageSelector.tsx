@@ -1,30 +1,56 @@
-"use client";
+"use client"
 
-import React from 'react';
-import { useLanguage } from './LanguageContext';
+import React from "react"
+import { useLanguage } from "@/components/i18n/LanguageContext"
 
-export const LanguageSelector: React.FC = () => {
-  const { language, setLanguage, t } = useLanguage();
+// Icono sólido estilo toggle (similar al de modo oscuro)
+const GlobeSolid = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    aria-hidden="true"
+    className={className}
+  >
+    <g clipPath="url(#a)">
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10.27 14.1a6.5 6.5 0 0 0 3.67-3.45q-1.24.21-2.7.34-.31 1.83-.97 3.1M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.48-1.52a7 7 0 0 1-.96 0H7.5a4 4 0 0 1-.84-1.32q-.38-.89-.63-2.08a40 40 0 0 0 3.92 0q-.25 1.2-.63 2.08a4 4 0 0 1-.84 1.31zm2.94-4.76q1.66-.15 2.95-.43a7 7 0 0 0 0-2.58q-1.3-.27-2.95-.43a18 18 0 0 1 0 3.44m-1.27-3.54a17 17 0 0 1 0 3.64 39 39 0 0 1-4.3 0 17 17 0 0 1 0-3.64 39 39 0 0 1 4.3 0m1.1-1.17q1.45.13 2.69.34a6.5 6.5 0 0 0-3.67-3.44q.65 1.26.98 3.1M8.48 1.5l.01.02q.41.37.84 1.31.38.89.63 2.08a40 40 0 0 0-3.92 0q.25-1.2.63-2.08a4 4 0 0 1 .85-1.32 7 7 0 0 1 .96 0m-2.75.4a6.5 6.5 0 0 0-3.67 3.44 29 29 0 0 1 2.7-.34q.31-1.83.97-3.1M4.58 6.28q-1.66.16-2.95.43a7 7 0 0 0 0 2.58q1.3.27 2.95.43a18 18 0 0 1 0-3.44m.17 4.71q-1.45-.12-2.69-.34a6.5 6.5 0 0 0 3.67 3.44q-.65-1.27-.98-3.1"
+      />
+    </g>
+    <defs>
+      <clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z" /></clipPath>
+    </defs>
+  </svg>
+)
+
+export function LanguageSelector() {
+  const { language, setLanguage, t } = useLanguage()
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setLanguage(e.target.value)
+  }
 
   return (
-    <div className="relative inline-block text-left">
-      <div>
-        <button
-          type="button"
-          className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          id="language-menu"
-          aria-expanded="true"
-          aria-haspopup="true"
-          onClick={() => {
-            setLanguage(language === 'es' ? 'en' : 'es');
-          }}
-        >
-          {language === 'es' ? '🇪🇸 ES' : '🇬🇧 EN'}
-          <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-          </svg>
-        </button>
-      </div>
+    <div className="flex items-center gap-2 px-3 py-1.5 bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 rounded-xl">
+      <span className="inline-flex items-center justify-center rounded-full bg-cyan-500/15 p-1">
+        <GlobeSolid className="w-4 h-4 text-cyan-400" />
+      </span>
+      <label htmlFor="lang" className="text-sm text-cyan-300 whitespace-nowrap leading-none">
+        {t("language.select")}
+      </label>
+      <select
+        id="lang"
+        value={language}
+        onChange={handleChange}
+        className="px-2 py-1 bg-black/20 border border-cyan-500/40 rounded text-cyan-100 text-sm focus:outline-none hover:border-cyan-500/60 transition-colors"
+        aria-label={t("language.select")}
+        title={t("language.select") as string}
+      >
+        <option value="es">{t("language.es")}</option>
+        <option value="en">{t("language.en")}</option>
+      </select>
     </div>
-  );
-};
+  )
+}

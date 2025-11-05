@@ -1,0 +1,125 @@
+const en = {
+  hero: {
+    greeting: "Hello! I'm",
+    name: "Juan Pablo Lucero",
+    role: "Software Engineer",
+    description: "Passionate about creating innovative and functional web experiences",
+    contact: "CONTACT ME",
+  },
+  about: {
+    title: "ABOUT ME",
+    description:
+      "I'm a web developer with experience in frontend and backend technologies. I specialize in creating modern and responsive web applications using the latest technologies.",
+    student:
+      "SOFTWARE ENGINEERING student in fifth semester. Committed, proactive and passionate about CONTINUOUS LEARNING.",
+  },
+  experience: {
+    title: "EXPERIENCE",
+    years: "Years of experience",
+    frontend: "Frontend Development",
+    backend: "Backend Development",
+    mobile: "Mobile Development",
+    design: "UI/UX Design",
+    academic: {
+      title: "Academic Background",
+      software_engineering: {
+        title: "Software Engineering",
+        institution: "Technological University",
+        period: "2022 - Present",
+        description:
+          "Currently in fifth semester focusing on full-stack web development, databases, and software architecture. Outstanding GPA and active participation in collaborative projects.",
+      },
+      data_analysis: {
+        title: "Data Analysis Course",
+        institution: "Certified Online Platform",
+        period: "2024",
+        description:
+          "Certification in data analysis with Python, visualization with Matplotlib and Pandas, and techniques for cleaning and processing information for strategic decision making.",
+      },
+      web_bootcamp: {
+        title: "Web Development Bootcamp",
+        institution: "Programming Academy",
+        period: "2023",
+        description:
+          "Intensive 6-month program focused on modern technologies: React, Next.js, TypeScript, Node.js, and SQL/NoSQL databases. Development of 8 practical projects.",
+      },
+    },
+    work: {
+      title: "Work Experience",
+    },
+  },
+  testimonials: {
+    title: "TESTIMONIALS",
+    subtitle: "What people say about me",
+    client1: {
+      name: "Maria Gonzalez",
+      role: "CEO at TechSolutions",
+      text: "Juan Pablo demonstrated excellent technical mastery and a great ability to solve complex problems.",
+    },
+    client2: {
+      name: "Carlos Rodriguez",
+      role: "Project Director",
+      text: "His commitment and professionalism made the project a resounding success.",
+    },
+    client3: {
+      name: "Laura Martinez",
+      role: "UX Designer",
+      text: "Working with Juan Pablo was a very enriching experience. His attention to detail is impressive.",
+    },
+    professor: {
+      name: "Dr. Carlos Mendoza",
+      role: "Software Engineering Professor",
+      text:
+        "Juan Pablo is one of the most dedicated students I've had. His ability to solve complex problems and his constant pursuit of learning set him apart from the rest. He always delivers high-quality projects and demonstrates a deep understanding of programming concepts.",
+    },
+    teammate: {
+      name: "Maria Gonzalez",
+      role: "Project Teammate - Hackathon 2024",
+      text:
+        "Working with Juan Pablo was an incredible experience. His teamwork skills and proactivity made our project a success. He is always willing to help and contributes innovative ideas. He's the type of developer anyone would want to collaborate with.",
+    },
+    client_roberto: {
+      name: "Roberto Silva",
+      role: "Freelance Client",
+      text:
+        "Juan Pablo developed my e-commerce website with great professionalism. He perfectly understood my needs and delivered a product that exceeded my expectations. His communication was clear and constant throughout the process.",
+    },
+    excellence: "Commitment to excellence",
+  },
+  projects: {
+    title: "PROJECTS",
+    viewCode: "View code",
+    viewDemo: "View demo",
+    description: "These are some of the projects I've worked on recently",
+  },
+  contact: {
+    title: "CONTACT",
+    subtitle: "Interested in working together? Get in touch!",
+    email: "Email",
+    linkedin: "LinkedIn",
+    github: "GitHub",
+    phone: "Phone",
+    send_message: "SEND MESSAGE",
+  },
+  footer: {
+    copyright: "© 2025 Juan Pablo Lucero Morales. All rights reserved.",
+  },
+  cv: {
+    download: "DOWNLOAD CV",
+  },
+  language: {
+    select: "Select language",
+    es: "Spanish",
+    en: "English",
+  },
+  navigation: {
+    home: "HOME",
+    about: "ABOUT ME",
+    projects: "PROJECTS",
+    testimonials: "TESTIMONIALS",
+    experience: "EXPERIENCE",
+    contact: "CONTACT",
+  },
+} as const
+
+export default en

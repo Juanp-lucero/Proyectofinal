@@ -1,34 +1,34 @@
-import { useLanguage } from "./i18n/LanguageContext";
+"use client"
+import { useLanguage } from "@/components/i18n/LanguageContext"
 
 export function Testimonials() {
-  const { t } = useLanguage();
-  
-  const { language } = useLanguage();
-  
+  const { t } = useLanguage()
+  const tr = t("testimonials")
+
   const testimonials = [
     {
-      name: language === 'es' ? "Dr. Carlos Mendoza" : "Dr. Carlos Mendoza",
-      role: language === 'es' ? "Profesor de Ingeniería de Software" : "Software Engineering Professor",
+      name: tr.professor.name,
+      role: tr.professor.role,
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-      content: t('testimonials.professor.text'),
+      content: tr.professor.text,
       gradient: "from-cyan-500 to-purple-500",
       borderColor: "border-cyan-500/30",
       hoverBorder: "hover:border-cyan-500/70",
     },
     {
-      name: language === 'es' ? "María González" : "Maria Gonzalez",
-      role: language === 'es' ? "Compañera de Proyecto - Hackathon 2024" : "Project Teammate - Hackathon 2024",
+      name: tr.teammate.name,
+      role: tr.teammate.role,
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-      content: t('testimonials.teammate.text'),
+      content: tr.teammate.text,
       gradient: "from-purple-500 to-pink-500",
       borderColor: "border-purple-500/30",
       hoverBorder: "hover:border-purple-500/70",
     },
     {
-      name: language === 'es' ? "Roberto Silva" : "Roberto Silva",
-      role: language === 'es' ? "Cliente Freelance" : "Freelance Client",
+      name: tr.client_roberto.name,
+      role: tr.client_roberto.role,
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-      content: t('testimonials.client_roberto.text'),
+      content: tr.client_roberto.text,
       gradient: "from-pink-500 to-cyan-500",
       borderColor: "border-pink-500/30",
       hoverBorder: "hover:border-pink-500/70",
@@ -52,11 +52,12 @@ export function Testimonials() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-7xl font-black mb-6 text-center">
-          <span className="text-cyan-400 neon-glow">{t('testimonials.title')}</span>
+          <span className="text-cyan-400 neon-glow">{tr.title.slice(0, 5)}</span>
+          <span className="text-pink-500 neon-glow">{tr.title.slice(5)}</span>
         </h2>
 
         <p className="text-center text-cyan-100/70 text-lg mb-16 max-w-2xl mx-auto">
-          {t('testimonials.subtitle')}
+          {tr.subtitle}
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -100,7 +101,7 @@ export function Testimonials() {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-full">
             <span className="text-2xl">⭐</span>
-            <span className="text-cyan-100/90 font-semibold">{t('testimonials.excellence')}</span>
+            <span className="text-cyan-100/90 font-semibold">{tr.excellence}</span>
             <span className="text-2xl">⭐</span>
           </div>
         </div>

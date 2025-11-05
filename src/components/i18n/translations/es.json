@@ -30,7 +30,7 @@
         "title": "Curso de Análisis de Datos",
         "institution": "Plataforma Online Certificada",
         "period": "2024",
-        "description": "Certificación en análisis de datos con Python, visualización con Matplotlib y Pandas, y técnicas de limpieza y procesamiento de información para toma de decisiones estratégicas."
+        "description": "Certificación en análisis de datos con Python, visualización con Matplotlib y Pandas, y técnicas para limpieza y procesamiento de información para toma de decisiones estratégicas."
       },
       "web_bootcamp": {
         "title": "Bootcamp de Desarrollo Web",
@@ -40,7 +40,46 @@
       }
     },
     "work": {
-      "title": "Experiencia Laboral"
+      "title": "Experiencia Laboral",
+      "items": [
+        {
+          "title": "Desarrollador Frontend Junior",
+          "company": "Tech Solutions S.A.",
+          "period": "Ene 2024 - Presente",
+          "description": "Desarrollo de interfaces de usuario responsivas con React y TypeScript. Colaboración en equipo ágil para implementar nuevas funcionalidades y optimizar el rendimiento de aplicaciones web.",
+          "achievements": [
+            "Reducción del 30% en tiempo de carga de páginas",
+            "Implementación de 15+ componentes reutilizables",
+            "Mejora de accesibilidad web (WCAG 2.1)"
+          ]
+        },
+        {
+          "title": "Desarrollador Freelance",
+          "company": "Proyectos Independientes",
+          "period": "2023 - 2024",
+          "description": "Desarrollo de soluciones web personalizadas para pequeñas empresas y emprendedores. Gestión completa de proyectos desde el diseño hasta el despliegue en producción.",
+          "achievements": [
+            "5+ proyectos completados exitosamente",
+            "100% de satisfacción del cliente",
+            "Implementación de sistemas de gestión y e-commerce"
+          ]
+        },
+        {
+          "title": "Asistente de Desarrollo",
+          "company": "Laboratorio de Innovación Universitaria",
+          "period": "2023",
+          "description": "Apoyo en proyectos de investigación y desarrollo de prototipos tecnológicos. Colaboración con profesores y estudiantes en la implementación de soluciones innovadoras.",
+          "achievements": [
+            "Participación en 3 proyectos de investigación",
+            "Desarrollo de prototipo de app educativa",
+            "Presentación en congreso estudiantil"
+          ]
+        }
+      ]
+    },
+    "growth": {
+      "title": "En constante crecimiento y aprendizaje",
+      "text": "Cada proyecto y experiencia me ha permitido desarrollar habilidades técnicas y blandas, preparándome para enfrentar desafíos cada vez más complejos en el mundo del desarrollo de software."
     }
   },
   "testimonials": {
@@ -103,6 +142,17 @@
     "select": "Seleccionar idioma",
     "es": "Español",
     "en": "Inglés"
+  },
+  "beyond": {
+    "title": "MÁS ALLÁ DEL CÓDIGO",
+    "intro": "Fuera del mundo de la programación, mantengo un estilo de vida activo y saludable. Disfruto de:",
+    "activities": {
+      "cycling": "Ciclismo",
+      "running": "Running",
+      "sports": "Deportes",
+      "fitness": "Fitness"
+    },
+    "footer": "Estas actividades me ayudan a mantener el equilibrio, la disciplina y la energía necesaria para enfrentar nuevos desafíos tanto personales como profesionales."
   },
   "navigation": {
     "home": "INICIO",

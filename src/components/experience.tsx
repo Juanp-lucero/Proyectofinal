@@ -1,100 +1,57 @@
-import { useLanguage } from "./i18n/LanguageContext";
+"use client"
+import { useLanguage } from "@/components/i18n/LanguageContext"
+
+type WorkItem = {
+  title: string
+  company: string
+  period: string
+  description: string
+  achievements?: string[]
+}
 
 export function Experience() {
-  const { t, language } = useLanguage();
-  
+  const { t } = useLanguage()
+  const ex = t("experience") as any
+
+  const safeTitle: string = typeof ex?.title === "string" ? ex.title : "EXPERIENCIA"
+
   const academicExperience = [
     {
-      title: language === 'es' ? "Ingeniería de Software" : "Software Engineering",
-      institution: language === 'es' ? "Universidad Tecnológica" : "Technological University",
-      period: language === 'es' ? "2022 - Presente" : "2022 - Present",
-      description: t('experience.academic.software_engineering.description'),
+      title: ex.academic.software_engineering.title,
+      institution: ex.academic.software_engineering.institution,
+      period: ex.academic.software_engineering.period,
+      description: ex.academic.software_engineering.description,
       icon: "🎓",
       gradient: "from-cyan-500 to-purple-500",
       borderColor: "border-cyan-500/30",
     },
     {
-      title: language === 'es' ? "Curso de Análisis de Datos" : "Data Analysis Course",
-      institution: language === 'es' ? "Plataforma Online Certificada" : "Certified Online Platform",
-      period: "2024",
-      description: t('experience.academic.data_analysis.description'),
+      title: ex.academic.data_analysis.title,
+      institution: ex.academic.data_analysis.institution,
+      period: ex.academic.data_analysis.period,
+      description: ex.academic.data_analysis.description,
       icon: "📊",
       gradient: "from-purple-500 to-pink-500",
       borderColor: "border-purple-500/30",
     },
     {
-      title: language === 'es' ? "Bootcamp de Desarrollo Web" : "Web Development Bootcamp",
-      institution: language === 'es' ? "Academia de Programación" : "Programming Academy",
-      period: "2023",
-      description: t('experience.academic.web_bootcamp.description'),
+      title: ex.academic.web_bootcamp.title,
+      institution: ex.academic.web_bootcamp.institution,
+      period: ex.academic.web_bootcamp.period,
+      description: ex.academic.web_bootcamp.description,
       icon: "💻",
       gradient: "from-pink-500 to-cyan-500",
       borderColor: "border-pink-500/30",
     },
   ]
 
-  const workExperience = [
-    {
-      title: language === 'es' ? "Desarrollador Frontend Junior" : "Junior Frontend Developer",
-      company: "Tech Solutions S.A.",
-      period: language === 'es' ? "Ene 2024 - Presente" : "Jan 2024 - Present",
-      description: language === 'es' 
-        ? "Desarrollo de interfaces de usuario responsivas con React y TypeScript. Colaboración en equipo ágil para implementar nuevas funcionalidades y optimizar el rendimiento de aplicaciones web."
-        : "Development of responsive user interfaces with React and TypeScript. Collaboration in an agile team to implement new features and optimize web application performance.",
-      achievements: language === 'es' ? [
-        "Reducción del 30% en tiempo de carga de páginas",
-        "Implementación de 15+ componentes reutilizables",
-        "Mejora de accesibilidad web (WCAG 2.1)",
-      ] : [
-        "30% reduction in page load time",
-        "Implementation of 15+ reusable components",
-        "Web accessibility improvement (WCAG 2.1)",
-      ],
-      icon: "🚀",
-      gradient: "from-cyan-500 to-purple-500",
-      borderColor: "border-cyan-500/30",
-    },
-    {
-      title: language === 'es' ? "Desarrollador Freelance" : "Freelance Developer",
-      company: language === 'es' ? "Proyectos Independientes" : "Independent Projects",
-      period: "2023 - 2024",
-      description: language === 'es'
-        ? "Desarrollo de soluciones web personalizadas para pequeñas empresas y emprendedores. Gestión completa de proyectos desde el diseño hasta el despliegue en producción."
-        : "Development of custom web solutions for small businesses and entrepreneurs. Complete project management from design to production deployment.",
-      achievements: language === 'es' ? [
-        "5+ proyectos completados exitosamente",
-        "100% de satisfacción del cliente",
-        "Implementación de sistemas de gestión y e-commerce",
-      ] : [
-        "5+ successfully completed projects",
-        "100% client satisfaction",
-        "Implementation of management and e-commerce systems",
-      ],
-      icon: "💼",
-      gradient: "from-purple-500 to-pink-500",
-      borderColor: "border-purple-500/30",
-    },
-    {
-      title: language === 'es' ? "Asistente de Desarrollo" : "Development Assistant",
-      company: language === 'es' ? "Laboratorio de Innovación Universitaria" : "University Innovation Lab",
-      period: "2023",
-      description: language === 'es'
-        ? "Apoyo en proyectos de investigación y desarrollo de prototipos tecnológicos. Colaboración con profesores y estudiantes en la implementación de soluciones innovadoras."
-        : "Support in research projects and development of technological prototypes. Collaboration with professors and students in implementing innovative solutions.",
-      achievements: language === 'es' ? [
-        "Participación en 3 proyectos de investigación",
-        "Desarrollo de prototipo de app educativa",
-        "Presentación en congreso estudiantil",
-      ] : [
-        "Participation in 3 research projects",
-        "Development of educational app prototype",
-        "Presentation at student congress",
-      ],
-      icon: "🔬",
-      gradient: "from-pink-500 to-cyan-500",
-      borderColor: "border-pink-500/30",
-    },
-  ]
+  const workItems = t("experience.work.items") as WorkItem[]
+  const workExperience = (workItems || []).map((item: WorkItem, idx: number) => ({
+    ...item,
+    icon: idx === 0 ? "🚀" : idx === 1 ? "💼" : "🔬",
+    gradient: idx === 0 ? "from-cyan-500 to-purple-500" : idx === 1 ? "from-purple-500 to-pink-500" : "from-pink-500 to-cyan-500",
+    borderColor: idx === 0 ? "border-cyan-500/30" : idx === 1 ? "border-purple-500/30" : "border-pink-500/30",
+  }))
 
   return (
     <section id="experiencia" className="py-32 px-6 relative overflow-hidden">
@@ -113,19 +70,19 @@ export function Experience() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-7xl font-black mb-6 text-center">
-          <span className="text-cyan-400 neon-glow">{t('experience.title')}</span>
+          <span className="text-cyan-400 neon-glow">{safeTitle.slice(0, 4)}</span>
+          <span className="text-pink-500 neon-glow">{safeTitle.slice(4)}</span>
         </h2>
 
         <p className="text-center text-cyan-100/70 text-lg mb-16 max-w-2xl mx-auto">
-          {language === 'es' 
-            ? "Mi trayectoria académica y profesional en el mundo del desarrollo de software"
-            : "My academic and professional journey in the software development world"}
+          {/* Descripción opcional podría añadirse al diccionario si se desea */}
+          
         </p>
 
         <div className="mb-20">
           <h3 className="text-3xl md:text-4xl font-bold mb-10 text-center">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
-              {language === 'es' ? "Formación Académica" : "Academic Training"}
+              {ex.academic.title}
             </span>
           </h3>
 
@@ -156,12 +113,12 @@ export function Experience() {
         <div>
           <h3 className="text-3xl md:text-4xl font-bold mb-10 text-center">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
-              {language === 'es' ? "Experiencia Laboral" : "Work Experience"}
+              {ex.work.title}
             </span>
           </h3>
 
           <div className="space-y-8">
-            {workExperience.map((item, index) => (
+            {(workExperience || []).map((item, index) => (
               <div key={index} className="group relative">
                 <div
                   className={`absolute inset-0 bg-gradient-to-r ${item.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity`}
@@ -185,8 +142,8 @@ export function Experience() {
                         <p className="text-cyan-100/80 leading-relaxed mb-6">{item.description}</p>
 
                         <div className="space-y-2">
-                          <p className="text-pink-400 font-semibold text-sm mb-3">{language === 'es' ? "Logros destacados:" : "Key achievements:"}</p>
-                          {item.achievements.map((achievement, idx) => (
+                          <p className="text-pink-400 font-semibold text-sm mb-3">{(ex?.work?.achievements_title ?? "Logros destacados:")}</p>
+                          {(item.achievements ?? []).map((achievement: string, idx: number) => (
                             <div key={idx} className="flex items-start gap-3">
                               <span className="text-cyan-400 mt-1">✓</span>
                               <p className="text-cyan-100/70 text-sm">{achievement}</p>
@@ -206,17 +163,11 @@ export function Experience() {
           <div className="inline-flex flex-col items-center gap-4 px-8 py-6 bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl">
             <div className="flex items-center gap-3">
               <span className="text-3xl">🎯</span>
-              <span className="text-cyan-100/90 font-semibold text-lg">
-                {language === 'es' 
-                  ? "En constante crecimiento y aprendizaje" 
-                  : "Constantly growing and learning"}
-              </span>
+              <span className="text-cyan-100/90 font-semibold text-lg">{ex?.growth?.title ?? "En constante crecimiento y aprendizaje"}</span>
               <span className="text-3xl">🎯</span>
             </div>
             <p className="text-cyan-100/60 text-sm max-w-2xl">
-              {language === 'es'
-                ? "Cada proyecto y experiencia me ha permitido desarrollar habilidades técnicas y blandas, preparándome para enfrentar desafíos cada vez más complejos en el mundo del desarrollo de software."
-                : "Each project and experience has allowed me to develop technical and soft skills, preparing me to face increasingly complex challenges in the software development world."}
+              {ex?.growth?.text ?? "Cada proyecto y experiencia me ha permitido desarrollar habilidades técnicas y blandas, preparándome para enfrentar desafíos cada vez más complejos en el mundo del desarrollo de software."}
             </p>
           </div>
         </div>
