@@ -2,9 +2,7 @@
 
 import { CVButton } from "./cv-button"
 import { useLanguage } from "./i18n/LanguageContext"
-import Image from "next/image"
-import heroDog from "../../public/hero-dog.jpg"
-import heroSelfie from "../../public/hero-selfie.jpg"
+// Imágenes anteriores desde public
 
 const AnimatedWaves = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -105,16 +103,18 @@ export function Hero() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-16">
           <div className="relative group animate-float">
-            <div className="relative z-20 bg-black/20 border-2 border-cyan-500 rounded-2xl overflow-hidden p-2">
+            {/* Glow overlay detrás de la tarjeta (no cubre imagen) */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity pointer-events-none z-0"></div>
+            <div className="relative z-10 bg-black/20 border-2 border-cyan-500/60 rounded-2xl overflow-hidden p-2">
               <div className="relative h-64">
                 <img
                   src="/hero-dog.jpg"
-                  alt="Dog raising its paw at a table"
-                  className="w-full h-64 object-cover rounded-xl block"
+                  alt="Perro levantando la pata en una mesa"
+                  className="w-full h-64 object-cover rounded-xl block relative z-20"
                   onError={(e) => {
                     const img = e.currentTarget
                     img.onerror = null
-                    img.src = "/hero-dog.svg"
+                    img.src = "/window.svg"
                   }}
                 />
               </div>
@@ -122,16 +122,18 @@ export function Hero() {
           </div>
 
           <div className="relative group animate-float" style={{ animationDelay: "1s" }}>
-            <div className="relative z-20 bg-black/20 border-2 border-purple-500 rounded-2xl overflow-hidden p-2">
+            {/* Glow overlay detrás de la tarjeta (no cubre imagen) */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity pointer-events-none z-0"></div>
+            <div className="relative z-10 bg-black/20 border-2 border-purple-500/60 rounded-2xl overflow-hidden p-2">
               <div className="relative h-64">
                 <img
                   src="/hero-selfie.jpg"
-                  alt="Mirror selfie wearing a pink hoodie"
-                  className="w-full h-64 object-cover rounded-xl block"
+                  alt="Selfie en espejo con buzo rosa"
+                  className="w-full h-64 object-cover rounded-xl block relative z-20"
                   onError={(e) => {
                     const img = e.currentTarget
                     img.onerror = null
-                    img.src = "/hero-selfie.svg"
+                    img.src = "/file.svg"
                   }}
                 />
               </div>

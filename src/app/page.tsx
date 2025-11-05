@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Hero } from "../components/hero"
-import { Experience } from "../components/Experience"
+import { Experience } from "../components/experience"
 import { Testimonials } from "../components/testimonials"
 import { useLanguage } from "@/components/i18n/LanguageContext"
 
