@@ -3,14 +3,57 @@ import { useLanguage } from "./i18n/LanguageContext"
 
 export function CVButton() {
   const { t } = useLanguage()
-  const handleDownloadCV = () => {
-    const cvUrl = "/cv-juan-pablo-lucero.pdf" 
-    const link = document.createElement("a")
-    link.href = cvUrl
-    link.download = "CV-Juan-Pablo-Lucero-Morales.pdf"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  const handleDownloadCV = async () => {
+    const candidates = [
+      "/cv-juan-pablo-lucero.pdf",
+      "/cv-juan-pablo-lucero.pdf.pdf",
+    ]
+
+    try {
+      // Probar las posibles rutas de archivo en public
+      for (const url of candidates) {
+        const res = await fetch(url, { method: "HEAD" })
+        const isPdf = res.headers.get("content-type")?.includes("application/pdf")
+        if (res.ok && isPdf) {
+          const link = document.createElement("a")
+          link.href = url
+          link.download = "CV-Juan-Pablo-Lucero-Morales.pdf"
+          document.body.appendChild(link)
+          link.click()
+          document.body.removeChild(link)
+          return
+        }
+      }
+    } catch (e) {
+      // Si falla el HEAD, probamos fallback a generación
+    }
+
+    // Fallback: generar un PDF básico con jsPDF si no existe el archivo en public
+    try {
+      const jsPDF = (await import("jspdf")).default
+      const doc = new jsPDF()
+
+      doc.setFontSize(18)
+      doc.text("Curriculum Vitae", 20, 20)
+      doc.setFontSize(14)
+      doc.text("Juan Pablo Lucero Morales", 20, 35)
+      doc.text("Ingeniero de Software", 20, 45)
+      doc.text("Email: tu.email@ejemplo.com", 20, 60)
+      doc.text("LinkedIn: https://linkedin.com/in/tu-perfil", 20, 70)
+
+      doc.setFontSize(12)
+      doc.text("Resumen:", 20, 90)
+      doc.text(
+        "Desarrollador web con experiencia en Next.js, React y TypeScript. Apasionado por crear experiencias modernas y eficientes.",
+        20,
+        100,
+        { maxWidth: 170 }
+      )
+
+      doc.save("CV-Juan-Pablo-Lucero-Morales.pdf")
+    } catch (err) {
+      console.error("No se pudo generar el PDF", err)
+    }
   }
 
   return (
