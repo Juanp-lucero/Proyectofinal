@@ -349,13 +349,18 @@ export function Hero() {
 
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                <div className="relative bg-black/40 border-2 border-pink-500/30 rounded-xl overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=300&fit=crop"
-                    alt="Deportes y vida activa"
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
+              <div className="relative bg-black/40 border-2 border-pink-500/30 rounded-xl overflow-hidden">
+                <img
+                  src="/about-gym.jpg"
+                  alt={language === 'es' ? 'Sobre mí en el gimnasio' : 'About me at the gym'}
+                  className="w-full h-64 object-cover"
+                  onError={(e) => {
+                    const img = e.currentTarget
+                    img.onerror = null
+                    img.src = "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=300&fit=crop"
+                  }}
+                />
+              </div>
               </div>
             </div>
           </div>
