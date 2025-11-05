@@ -2,6 +2,9 @@
 
 import { CVButton } from "./cv-button"
 import { useLanguage } from "./i18n/LanguageContext"
+import Image from "next/image"
+import heroDog from "../../public/hero-dog.jpg"
+import heroSelfie from "../../public/hero-selfie.jpg"
 
 const AnimatedWaves = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -102,24 +105,36 @@ export function Hero() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-16">
           <div className="relative group animate-float">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
-            <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden p-2">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/abstract-technology-network-connections-data-visua-ewU2LSuN2w53JQR4edEPjhKMR0C8Bd.jpg"
-                alt="Software Development"
-                className="w-full h-64 object-cover rounded-xl"
-              />
+            <div className="relative z-20 bg-black/20 border-2 border-cyan-500 rounded-2xl overflow-hidden p-2">
+              <div className="relative h-64">
+                <img
+                  src="/hero-dog.jpg"
+                  alt="Dog raising its paw at a table"
+                  className="w-full h-64 object-cover rounded-xl block"
+                  onError={(e) => {
+                    const img = e.currentTarget
+                    img.onerror = null
+                    img.src = "/hero-dog.svg"
+                  }}
+                />
+              </div>
             </div>
           </div>
 
           <div className="relative group animate-float" style={{ animationDelay: "1s" }}>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
-            <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden p-2">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/software-developer-coding-on-laptop-with-neon-holo-CWVvVTfPwXyiqKRIH60KgaIkf8Q1cQ.jpg"
-                alt="Technology Network"
-                className="w-full h-64 object-cover rounded-xl"
-              />
+            <div className="relative z-20 bg-black/20 border-2 border-purple-500 rounded-2xl overflow-hidden p-2">
+              <div className="relative h-64">
+                <img
+                  src="/hero-selfie.jpg"
+                  alt="Mirror selfie wearing a pink hoodie"
+                  className="w-full h-64 object-cover rounded-xl block"
+                  onError={(e) => {
+                    const img = e.currentTarget
+                    img.onerror = null
+                    img.src = "/hero-selfie.svg"
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
