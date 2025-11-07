@@ -396,9 +396,14 @@ export function Hero() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=400&fit=crop"
+                    src="/students-db.jpg"
                     alt="Base de Datos de Estudiantes"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      const img = e.currentTarget
+                      img.onerror = null
+                      img.src = "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=400&fit=crop"
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
@@ -432,9 +437,14 @@ export function Hero() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop"
+                    src="/cognitive-games.jpg"
                     alt="Juegos Cognitivos"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      const img = e.currentTarget
+                      img.onerror = null
+                      img.src = "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop"
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
@@ -468,9 +478,14 @@ export function Hero() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&h=400&fit=crop"
+                    src="/tailwind-card.jpg"
                     alt="Card Tailwind"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      const img = e.currentTarget
+                      img.onerror = null
+                      img.src = "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&h=400&fit=crop"
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
@@ -504,9 +519,14 @@ export function Hero() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop"
+                    src="/web-wireframe.jpg"
                     alt="Maquetación CSS"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      const img = e.currentTarget
+                      img.onerror = null
+                      img.src = "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop"
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
@@ -540,9 +560,14 @@ export function Hero() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg"
+                    src="/mobile-ui.jpg"
                     alt="Sistema de Gestión de Tareas"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      const img = e.currentTarget
+                      img.onerror = null
+                      img.src = "https://www.proofhub.com/articles/wp-content/uploads/2020/02/Best-Task-Management-App-%E2%80%93-Keep-Your-Business-On-Track.jpg"
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
@@ -575,9 +600,14 @@ export function Hero() {
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+                    src="/landing-page.jpg"
                     alt="Landing Page Responsive"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      const img = e.currentTarget
+                      img.onerror = null
+                      img.src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
