@@ -96,9 +96,6 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <CVButton />
-          <button className="px-8 py-4 bg-black/40 text-cyan-400 border-2 border-cyan-500/50 font-bold rounded-xl hover:bg-cyan-500/20 transition-all">
-            {t("hero.contact")}
-          </button>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-16">
