@@ -82,7 +82,7 @@ export function Hero() {
           </span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-wider">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 tracking-wider">
           <span className="text-white">JUAN PABLO</span>
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
@@ -90,7 +90,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="text-xl text-cyan-100/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+        <p className="text-base sm:text-xl text-cyan-100/80 max-w-3xl mx-auto mb-8 leading-relaxed">
           {t("about.student")}
         </p>
 
@@ -98,12 +98,12 @@ export function Hero() {
           <CVButton />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto mt-12 sm:mt-16">
           <div className="relative group animate-float">
             {/* Glow overlay detrás de la tarjeta (no cubre imagen) */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity pointer-events-none z-0"></div>
             <div className="relative z-10 bg-black/20 border-2 border-cyan-500/60 rounded-2xl overflow-hidden p-2">
-              <div className="relative h-64">
+              <div className="relative h-48 sm:h-64">
                 <img
                   src="/hero-dog.jpg"
                   alt="Perro levantando la pata en una mesa"
@@ -122,7 +122,7 @@ export function Hero() {
             {/* Glow overlay detrás de la tarjeta (no cubre imagen) */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity pointer-events-none z-0"></div>
             <div className="relative z-10 bg-black/20 border-2 border-purple-500/60 rounded-2xl overflow-hidden p-2">
-              <div className="relative h-64">
+              <div className="relative h-48 sm:h-64">
                 <img
                   src="/hero-selfie.jpg"
                   alt="Selfie en espejo con buzo rosa"

@@ -165,7 +165,7 @@ export function Hero() {
     <div className="min-h-screen bg-black text-white">
       <Hero />
 
-      <section id="sobre-mi" className="py-32 px-6 relative overflow-hidden">
+      <section id="sobre-mi" className="py-24 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/50 to-black"></div>
 
         <div
@@ -182,12 +182,12 @@ export function Hero() {
         <AnimatedWaves />
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <h2 className="text-5xl md:text-7xl font-black mb-16 text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mb-16 text-center">
             <span className="text-cyan-400 neon-glow">{language === 'en' ? 'ABOUT ' : 'SOBRE '}</span>
             <span className="text-pink-500 neon-glow">{language === 'en' ? 'ME' : 'MÍ'}</span>
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-start">
             <div className="space-y-8">
               
               <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-500/50 transition-all">
@@ -367,7 +367,7 @@ export function Hero() {
         </div>
       </section>
 
-      <section id="proyectos" className="py-32 px-6 relative overflow-hidden">
+      <section id="proyectos" className="py-24 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/30 to-black"></div>
 
         <div
@@ -384,17 +384,17 @@ export function Hero() {
         <AnimatedWaves />
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-5xl md:text-7xl font-black mb-16 text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mb-16 text-center">
             <span className="text-cyan-400 neon-glow">{language === 'en' ? 'MY ' : 'MIS '}</span>
             <span className="text-pink-500 neon-glow">{language === 'en' ? 'PROJECTS' : 'PROYECTOS'}</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 auto-rows-fr items-stretch">
             
             <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all h-full flex flex-col">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 md:h-48 overflow-hidden">
                   <img
                     src="/students-db.jpg"
                     alt="Base de Datos de Estudiantes"
@@ -435,7 +435,7 @@ export function Hero() {
             <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all h-full flex flex-col">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 md:h-48 overflow-hidden">
                   <img
                     src="/cognitive-games.jpg"
                     alt="Juegos Cognitivos"
@@ -476,7 +476,7 @@ export function Hero() {
             <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-pink-500/30 rounded-2xl overflow-hidden hover:border-pink-500/70 transition-all h-full flex flex-col">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 md:h-48 overflow-hidden">
                   <img
                     src="/tailwind-card.jpg"
                     alt="Card Tailwind"
@@ -517,7 +517,7 @@ export function Hero() {
             <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-500/70 transition-all h-full flex flex-col">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 md:h-48 overflow-hidden">
                   <img
                     src="/web-wireframe.jpg"
                     alt="Maquetación CSS"
@@ -558,7 +558,7 @@ export function Hero() {
             <div className="group relative h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative bg-black/60 backdrop-blur-sm border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/70 transition-all h-full flex flex-col">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 md:h-48 overflow-hidden">
                   <img
                     src="/mobile-ui.jpg"
                     alt="Sistema de Gestión de Tareas"
@@ -642,7 +642,7 @@ export function Hero() {
 
       <Experience />
 
-      <section id="contacto" className="py-32 px-6 relative overflow-hidden">
+      <section id="contacto" className="py-24 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/40 to-black"></div>
 
         <div
@@ -657,7 +657,7 @@ export function Hero() {
         />
 
         <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <h2 className="text-5xl md:text-7xl font-black mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6">
             <span className="text-cyan-400 neon-glow">{language === 'en' ? 'CONT' : 'CONTAC'}</span>
             <span className="text-pink-500 neon-glow">{language === 'en' ? 'ACT' : 'TO'}</span>
           </h2>
@@ -665,7 +665,7 @@ export function Hero() {
           <p className="text-cyan-100/70 text-lg mb-12">{language === 'en' ? 'Do you have a project in mind? Let\'s talk!' : '¿Tienes un proyecto en mente? ¡Hablemos!'}</p>
 
           <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8">
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-8">
               <a
                 href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('juanp.lucero.2006@gmail.com')}`}
                 target="_blank"

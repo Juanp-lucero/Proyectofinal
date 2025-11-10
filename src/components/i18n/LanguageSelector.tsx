@@ -10,7 +10,7 @@ const GlobeSolid = ({ className = "w-4 h-4" }: { className?: string }) => (
     viewBox="0 0 16 16"
     fill="currentColor"
     aria-hidden="true"
-    className={className}
+    className={`${className} block align-middle`}
   >
     <g clipPath="url(#a)">
       <path
@@ -33,18 +33,18 @@ export function LanguageSelector() {
   }
 
   return (
-    <div className="flex items-center gap-2 px-3 py-1.5 bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 rounded-xl">
-      <span className="inline-flex items-center justify-center rounded-full bg-cyan-500/15 p-1">
-        <GlobeSolid className="w-4 h-4 text-cyan-400" />
+    <div className="flex items-center gap-3 px-3 py-1.5 h-9 bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 rounded-xl">
+      <span className="inline-flex items-center justify-center rounded-full bg-cyan-500/15 w-6 h-6">
+        <GlobeSolid className="w-5 h-5 text-cyan-400" />
       </span>
-      <label htmlFor="lang" className="text-sm text-cyan-300 whitespace-nowrap leading-none">
+      <label htmlFor="lang" className="text-sm leading-none text-cyan-300 whitespace-nowrap">
         {t("language.select")}
       </label>
       <select
         id="lang"
         value={language}
         onChange={handleChange}
-        className="px-2 py-1 bg-black/20 border border-cyan-500/40 rounded text-cyan-100 text-sm focus:outline-none hover:border-cyan-500/60 transition-colors"
+        className="px-2 py-1 h-7 bg-black/20 border border-cyan-500/40 rounded text-cyan-100 text-sm focus:outline-none hover:border-cyan-500/60 transition-colors"
         aria-label={t("language.select")}
         title={t("language.select") as string}
       >
