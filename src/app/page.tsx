@@ -666,42 +666,67 @@ export function Hero() {
 
           <div className="bg-black/40 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-8">
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="flex items-center gap-4 p-4 bg-black/40 border border-cyan-500/20 rounded-xl">
+              <a
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('juanp.lucero.2006@gmail.com')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 bg-black/40 border border-cyan-500/20 rounded-xl"
+              >
                 <div className="text-3xl">📧</div>
                 <div className="text-left">
                   <p className="text-cyan-400 font-semibold">Email</p>
                   <p className="text-cyan-100/70 text-sm">juanp.lucero.2006@gmail.com</p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-center gap-4 p-4 bg-black/40 border border-purple-500/20 rounded-xl">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 bg-black/40 border border-purple-500/20 rounded-xl"
+              >
                 <div className="text-3xl">💼</div>
                 <div className="text-left">
                   <p className="text-purple-400 font-semibold">LinkedIn</p>
                   <p className="text-cyan-100/70 text-sm">Juan Pablo Lucero</p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-center gap-4 p-4 bg-black/40 border border-pink-500/20 rounded-xl">
+              <a
+                href="https://github.com/Juanp-lucero"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 bg-black/40 border border-pink-500/20 rounded-xl"
+              >
                 <div className="text-3xl">🐙</div>
                 <div className="text-left">
                   <p className="text-pink-400 font-semibold">GitHub</p>
                   <p className="text-cyan-100/70 text-sm">Juanp-lucero</p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-center gap-4 p-4 bg-black/40 border border-cyan-500/20 rounded-xl">
+              <a
+                href="https://wa.me/57315819139"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 bg-black/40 border border-cyan-500/20 rounded-xl"
+              >
                 <div className="text-3xl">📱</div>
                 <div className="text-left">
                   <p className="text-cyan-400 font-semibold">Teléfono</p>
                   <p className="text-cyan-100/70 text-sm">+57 315819139</p>
                 </div>
-              </div>
+              </a>
             </div>
 
-            <button className="px-12 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-black font-bold rounded-xl hover:scale-105 transition-transform text-lg">
+            <a
+              href="https://wa.me/57315819139"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-12 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-black font-bold rounded-xl hover:scale-105 transition-transform text-lg inline-block"
+            >
               {language === 'es' ? 'ENVIAR MENSAJE' : 'SEND MESSAGE'}
-            </button>
+            </a>
           </div>
         </div>
       </section>
