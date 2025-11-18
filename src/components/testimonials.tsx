@@ -9,7 +9,7 @@ export function Testimonials() {
     {
       name: tr.professor.name,
       role: tr.professor.role,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+      image: "/testimonio1.jpg",
       content: tr.professor.text,
       gradient: "from-cyan-500 to-purple-500",
       borderColor: "border-cyan-500/30",
@@ -18,7 +18,7 @@ export function Testimonials() {
     {
       name: tr.teammate.name,
       role: tr.teammate.role,
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      image: "/testimonio2.jpg",
       content: tr.teammate.text,
       gradient: "from-purple-500 to-pink-500",
       borderColor: "border-purple-500/30",
@@ -27,7 +27,7 @@ export function Testimonials() {
     {
       name: tr.client_roberto.name,
       role: tr.client_roberto.role,
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      image: "/testimonio3.jpg",
       content: tr.client_roberto.text,
       gradient: "from-pink-500 to-cyan-500",
       borderColor: "border-pink-500/30",
@@ -85,6 +85,9 @@ export function Testimonials() {
                         src={testimonial.image || "/placeholder.svg"}
                         alt={testimonial.name}
                         className="relative w-16 h-16 rounded-full object-cover border-2 border-cyan-500/30"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg"
+                        }}
                       />
                     </div>
                     <div>

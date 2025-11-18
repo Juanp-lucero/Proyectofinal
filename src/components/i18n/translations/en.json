@@ -101,19 +101,19 @@
       "text": "Working with Juan Pablo was a very enriching experience. His attention to detail is impressive."
     },
     "professor": {
-      "name": "Dr. Carlos Mendoza",
-      "role": "Software Engineering Professor",
+      "name": "Sebastián Rojas",
+      "role": "Software Engineering Student - 5th semester",
       "text": "Juan Pablo is one of the most dedicated students I've had. His ability to solve complex problems and his constant pursuit of learning set him apart from the rest. He always delivers high-quality projects and demonstrates a deep understanding of programming concepts."
     },
     "teammate": {
-      "name": "Maria Gonzalez",
-      "role": "Project Teammate - Hackathon 2024",
-      "text": "Working with Juan Pablo was an incredible experience. His teamwork skills and proactivity made our project a success. He is always willing to help and contributes innovative ideas. He's the type of developer anyone would want to collaborate with."
+      "name": "Jorge Samuel Patiño",
+      "role": "Software Engineering Student - 7th semester",
+      "text": "Juan Pablo helped me directly with control and electronics courses. What I value most is that you explain step by step and stay until it works. Thanks to your guidance I finished my line‑follower project and improved my Arduino code. Having you on my side made the difference."
     },
     "client_roberto": {
-      "name": "Roberto Silva",
-      "role": "Freelance Client",
-      "text": "Juan Pablo developed my e-commerce website with great professionalism. He perfectly understood my needs and delivered a product that exceeded my expectations. His communication was clear and constant throughout the process."
+      "name": "Nicolás David Gallardo",
+      "role": "Mechatronics Student - 9th semester",
+      "text": "For my thesis project, you helped me structure the robot’s software and document the tests properly. You were clear, patient, and very professional. With your support I closed the sprint on time and presented solid results."
     },
     "excellence": "Commitment to excellence"
   },

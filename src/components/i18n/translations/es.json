@@ -101,19 +101,19 @@
       "text": "Trabajar con Juan Pablo fue una experiencia muy enriquecedora. Su atención al detalle es impresionante."
     },
     "professor": {
-      "name": "Dr. Carlos Mendoza",
-      "role": "Profesor de Ingeniería de Software",
+      "name": "Sebastián Rojas",
+      "role": "Estudiante de Ingeniería de Software - 5° semestre",
       "text": "Juan Pablo es uno de los estudiantes más dedicados que he tenido. Su capacidad para resolver problemas complejos y su constante búsqueda de aprendizaje lo destacan del resto. Siempre entrega proyectos de alta calidad y demuestra un profundo entendimiento de los conceptos de programación."
     },
     "teammate": {
-      "name": "María González",
-      "role": "Compañera de Proyecto - Hackathon 2024",
-      "text": "Trabajar con Juan Pablo fue una experiencia increíble. Su habilidad para trabajar en equipo y su proactividad hicieron que nuestro proyecto fuera un éxito. Siempre está dispuesto a ayudar y aporta ideas innovadoras. Es el tipo de desarrollador con el que cualquiera querría colaborar."
+      "name": "Jorge Samuel Patiño",
+      "role": "Estudiante de Ingeniería de Software - 7° semestre",
+      "text": "Juan Pablo me apoyó directamente en cursos de control y electrónica. Lo que más valoro es que tú explicas paso a paso y no te vas hasta que nos salga. Gracias a tu guía terminé mi proyecto de seguidor de línea y mejoré mi código en Arduino. Contar contigo hizo la diferencia."
     },
     "client_roberto": {
-      "name": "Roberto Silva",
-      "role": "Cliente Freelance",
-      "text": "Juan Pablo desarrolló mi sitio web de comercio electrónico con gran profesionalismo. Entendió perfectamente mis necesidades y entregó un producto que superó mis expectativas. Su comunicación fue clara y constante durante todo el proceso."
+      "name": "Nicolás David Gallardo",
+      "role": "Estudiante de Mecatrónica - 9° semestre",
+      "text": "En el desarrollo de mi proyecto de titulación, tú me ayudaste a estructurar el software del robot móvil y a documentar bien las pruebas. Fuiste claro, paciente y muy profesional. Con tu apoyo cerré el sprint a tiempo y presenté resultados sólidos."
     },
     "excellence": "Compromiso con la excelencia"
   },
