@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Hero } from "../components/hero"
 import { Experience } from "../components/experience"
+import { FutureProjects } from "../components/future-projects"
 import { Testimonials } from "../components/testimonials"
 import { useLanguage } from "@/components/i18n/LanguageContext"
 
@@ -641,6 +642,8 @@ export function Hero() {
       <Testimonials />
 
       <Experience />
+
+      <FutureProjects />
 
       <section id="contacto" className="py-24 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/40 to-black"></div>

@@ -123,6 +123,24 @@
     "viewDemo": "View demo",
     "description": "These are some of the projects I've worked on recently"
   },
+  "future_projects": {
+    "title": "FUTURE PROJECTS",
+    "subtitle": "Roadmap inspired by this portfolio",
+    "items": {
+      "platform": {
+        "title": "Full‑stack student management platform",
+        "description": "Evolve the 'Students DB' demo into a real system with authentication, dashboards, reports and advanced CRUD. Deploy on Vercel with managed database. Focus on performance and accessibility."
+      },
+      "mobile": {
+        "title": "Habits and fitness mobile app",
+        "description": "Inspired by the fitness section, build a React Native app to track routines, progress and reminders. Cloud sync and push notifications."
+      },
+      "ai": {
+        "title": "AI assistant for learning programming",
+        "description": "Integrate a service that suggests resources and explains portfolio code using embeddings and retrieval. API with FastAPI and UI in Next.js."
+      }
+    }
+  },
   "contact": {
     "title": "CONTACT",
     "subtitle": "Interested in working together? Get in touch!",
@@ -160,6 +178,7 @@
     "projects": "PROJECTS",
     "testimonials": "TESTIMONIALS",
     "experience": "EXPERIENCE",
+    "future": "FUTURE",
     "contact": "CONTACT"
   }
 }

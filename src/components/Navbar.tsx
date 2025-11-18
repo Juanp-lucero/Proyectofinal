@@ -51,6 +51,11 @@ export function Navbar() {
             <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
           </Link>
 
+          <Link href="#futuro" className="relative group transition-colors">
+            <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">{nav.future}</span>
+            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+
           <Link href="#contacto" className="relative group transition-colors">
             <span className="text-cyan-400 group-hover:text-pink-400 neon-glow">{nav.contact}</span>
             <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
@@ -103,6 +108,9 @@ export function Navbar() {
             </Link>
             <Link href="#experiencia" className="text-cyan-300 hover:text-pink-400" onClick={() => setOpen(false)}>
               {nav.experience}
+            </Link>
+            <Link href="#futuro" className="text-cyan-300 hover:text-pink-400" onClick={() => setOpen(false)}>
+              {nav.future}
             </Link>
             <Link href="#contacto" className="text-cyan-300 hover:text-pink-400" onClick={() => setOpen(false)}>
               {nav.contact}

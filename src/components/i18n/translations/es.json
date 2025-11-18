@@ -123,6 +123,24 @@
     "viewDemo": "Ver demo",
     "description": "Estos son algunos de los proyectos en los que he trabajado recientemente"
   },
+  "future_projects": {
+    "title": "PROYECTOS A FUTURO",
+    "subtitle": "Plan de evolución basado en este portafolio",
+    "items": {
+      "platform": {
+        "title": "Plataforma full‑stack para gestión de estudiantes",
+        "description": "Extender el demo 'Students DB' a un sistema real con autenticación, paneles, reportes y CRUD avanzado. Despliegue en Vercel con base de datos administrada. Enfoque en rendimiento y accesibilidad."
+      },
+      "mobile": {
+        "title": "App móvil de hábitos y fitness",
+        "description": "Tomando como inspiración el apartado fitness, construir una app React Native para seguimiento de rutinas, progreso y recordatorios. Sincronización en la nube y notificaciones push."
+      },
+      "ai": {
+        "title": "Asistente con IA para aprendizaje de programación",
+        "description": "Integrar un servicio que sugiera recursos y explique código del portafolio usando embeddings y recuperación de contexto. API con FastAPI y UI en Next.js."
+      }
+    }
+  },
   "contact": {
     "title": "CONTACTO",
     "subtitle": "¿Interesado en trabajar juntos? ¡Contáctame!",
@@ -160,6 +178,7 @@
     "projects": "PROYECTOS",
     "testimonials": "TESTIMONIOS",
     "experience": "EXPERIENCIA",
+    "future": "FUTURO",
     "contact": "CONTACTO"
   }
 }
