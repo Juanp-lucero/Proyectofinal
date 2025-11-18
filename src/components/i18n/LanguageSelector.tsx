@@ -25,32 +25,45 @@ const GlobeSolid = ({ className = "w-4 h-4" }: { className?: string }) => (
   </svg>
 )
 
+// Ícono moderno estilo outline (minimalista y legible)
+const GlobeModern = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.6"
+    aria-hidden="true"
+    className={`${className} block align-middle`}
+  >
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18" />
+    <path d="M12 3a16 16 0 0 0 0 18" />
+    <path d="M12 3a16 16 0 0 1 0 18" />
+  </svg>
+)
+
 export function LanguageSelector() {
   const { language, setLanguage, t } = useLanguage()
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setLanguage(e.target.value)
+  const toggleLanguage = () => {
+    setLanguage(language === "es" ? "en" : "es")
   }
 
   return (
-    <div className="flex items-center gap-3 px-3 py-1.5 h-9 bg-black/40 border border-cyan-500/20 hover:border-cyan-500/40 rounded-xl">
+    <button
+      type="button"
+      onClick={toggleLanguage}
+      className="inline-flex items-center gap-2 px-2.5 py-1.5 h-8 bg-black/40 border border-cyan-500/25 hover:border-cyan-500/50 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40"
+      aria-label={`${t("language.select")}: ${language === "es" ? t("language.es") : t("language.en")}`}
+      title={t("language.select") as string}
+    >
       <span className="inline-flex items-center justify-center rounded-full bg-cyan-500/15 w-6 h-6">
-        <GlobeSolid className="w-5 h-5 text-cyan-400" />
+        <GlobeModern className="w-4 h-4 text-cyan-400" />
       </span>
-      <label htmlFor="lang" className="text-sm leading-none text-cyan-300 whitespace-nowrap">
-        {t("language.select")}
-      </label>
-      <select
-        id="lang"
-        value={language}
-        onChange={handleChange}
-        className="px-2 py-1 h-7 bg-black/20 border border-cyan-500/40 rounded text-cyan-100 text-sm focus:outline-none hover:border-cyan-500/60 transition-colors"
-        aria-label={t("language.select")}
-        title={t("language.select") as string}
-      >
-        <option value="es">{t("language.es")}</option>
-        <option value="en">{t("language.en")}</option>
-      </select>
-    </div>
+      <span className="text-xs font-medium text-cyan-200">
+        {language === "es" ? t("language.es") : t("language.en")}
+      </span>
+    </button>
   )
 }
