@@ -107,7 +107,8 @@ export function Hero() {
                 <img
                   src="/hero-dog.jpg"
                   alt="Perro levantando la pata en una mesa"
-                  className="w-full h-64 object-cover rounded-xl block relative z-20"
+                  className="w-full h-64 object-cover rounded-xl block relative z-20 scale-125"
+                  style={{ objectPosition: "center 28%" }}
                   onError={(e) => {
                     const img = e.currentTarget
                     img.onerror = null
@@ -126,7 +127,8 @@ export function Hero() {
                 <img
                   src="/hero-selfie.jpg"
                   alt="Selfie en espejo con buzo rosa"
-                  className="w-full h-64 object-cover rounded-xl block relative z-20"
+                  className="w-full h-64 object-cover rounded-xl block relative z-20 scale-125"
+                  style={{ objectPosition: "center 30%" }}
                   onError={(e) => {
                     const img = e.currentTarget
                     img.onerror = null
