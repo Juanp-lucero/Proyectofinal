@@ -387,7 +387,7 @@ img {
   position: relative;
   margin: 12px 0;
   border-radius: 22px;
-  height: 420px;
+  height: 392px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.05));
   border: 1px solid rgba(255, 255, 255, 0.12);
   overflow: hidden;
@@ -429,6 +429,98 @@ img {
   bottom: 16px;
   display: grid;
   gap: 10px;
+}
+
+.mock__hud {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  pointer-events: none;
+}
+
+.mock__hudLeft {
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.mock__badge {
+  width: fit-content;
+  font-size: 11.5px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(7, 7, 11, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+}
+
+.mock__hudTitle strong {
+  display: block;
+  font-size: 13.5px;
+  letter-spacing: -0.2px;
+}
+
+.mock__hudTitle span {
+  display: block;
+  margin-top: 3px;
+  font-size: 12.5px;
+  color: var(--muted2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
+
+.mock__progress {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
+}
+
+.mock__progressFill {
+  display: block;
+  height: 100%;
+  width: 64%;
+  background: linear-gradient(90deg, rgba(255, 59, 48, 0.95), rgba(255, 138, 0, 0.9));
+  border-radius: 999px;
+}
+
+.mock__hudRight {
+  display: grid;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.mock__kpi {
+  border-radius: 16px;
+  padding: 10px 12px;
+  background: rgba(7, 7, 11, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3);
+  min-width: 118px;
+}
+
+.mock__kpi span {
+  display: block;
+  font-size: 11.5px;
+  color: var(--muted2);
+}
+
+.mock__kpi strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  letter-spacing: -0.2px;
 }
 
 .microcard {
